@@ -1,0 +1,27 @@
+name: Congress Tracker
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # runs every 6 hours
+  workflow_dispatch:        # lets you run it manually
+
+jobs:
+  track_bills:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run scraper
+        env:
+          CONGRESS_API_KEY: A6Ah5qMutteKToBfqUNznkl5PP2WGfDl1Ybid7XS
+        run: node scrape_bills.js
