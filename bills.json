@@ -36,6 +36,23 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-09-17T08:06:45Z",
+    "stageDates": {
+      "introduced": "2025-01-15",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-02-20"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-01-15"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -276,6 +293,47 @@
     ],
     "cosponsorCount": 17,
     "updatedDate": "2025-11-17T16:01:28Z",
+    "stageDates": {
+      "introduced": "2025-01-23",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-343.",
+        "actionDate": "2025-10-17"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-343.",
+        "actionDate": "2025-10-17"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-05-06"
+      },
+      {
+        "text": "Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote.",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-04"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-01-23"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -356,6 +414,43 @@
     ],
     "cosponsorCount": 4,
     "updatedDate": "2025-10-02T20:06:13Z",
+    "stageDates": {
+      "introduced": "2025-01-23",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Reported by the Committee on Veterans' Affairs. H. Rept. 119-309.",
+        "actionDate": "2025-09-26"
+      },
+      {
+        "text": "Reported by the Committee on Veterans' Affairs. H. Rept. 119-309.",
+        "actionDate": "2025-09-26"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
+        "actionDate": "2025-07-03"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-04"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-01-23"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -634,6 +729,23 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-02T08:30:15Z",
+    "stageDates": {
+      "introduced": "2025-01-28",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-01-28"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -862,6 +974,27 @@
     ],
     "cosponsorCount": 16,
     "updatedDate": "2025-09-29T22:41:12Z",
+    "stageDates": {
+      "introduced": "2025-01-28",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-12"
+      },
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-03-04"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-01-28"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -918,6 +1051,35 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-12-02T08:39:19Z",
+    "stageDates": {
+      "introduced": "2025-02-04",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-03-06"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-04"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1193,6 +1355,23 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-05-20T14:04:19Z",
+    "stageDates": {
+      "introduced": "2025-02-04",
+      "passedHouse": "2025-02-10",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+        "actionDate": "2025-02-11"
+      },
+      {
+        "text": "Referred to the House Committee on Financial Services.",
+        "actionDate": "2025-02-04"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1222,6 +1401,47 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-08-23T17:26:13Z",
+    "stageDates": {
+      "introduced": "2025-02-05",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-228.",
+        "actionDate": "2025-08-15"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-228.",
+        "actionDate": "2025-08-15"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-05-06"
+      },
+      {
+        "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-03-07"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-05"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1251,6 +1471,27 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-04-29T15:14:50Z",
+    "stageDates": {
+      "introduced": "2025-02-05",
+      "passedHouse": "2025-04-09",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-10"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-03-07"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-05"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1280,6 +1521,39 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-11-24T16:07:39Z",
+    "stageDates": {
+      "introduced": "2025-02-05",
+      "passedHouse": "2025-04-07",
+      "passedSenate": "2025-11-20",
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Senate Committee on Veterans' Affairs discharged by Unanimous Consent.",
+        "actionDate": "2025-11-20"
+      },
+      {
+        "text": "Senate Committee on Veterans' Affairs discharged by Unanimous Consent.",
+        "actionDate": "2025-11-20"
+      },
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-08"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-03-07"
+      },
+      {
+        "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-02-05"
+      },
+      {
+        "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-02-05"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1419,6 +1693,31 @@
     ],
     "cosponsorCount": 9,
     "updatedDate": "2025-06-02T20:27:28Z",
+    "stageDates": {
+      "introduced": "2025-02-06",
+      "passedHouse": "2025-04-07",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-08"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-06"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1461,6 +1760,31 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-04-29T15:11:38Z",
+    "stageDates": {
+      "introduced": "2025-02-12",
+      "passedHouse": "2025-04-09",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-10"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-21"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-12"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1711,6 +2035,51 @@
     ],
     "cosponsorCount": 18,
     "updatedDate": "2025-10-09T03:26:14Z",
+    "stageDates": {
+      "introduced": "2025-02-13",
+      "passedHouse": "2025-05-19",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-20"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-100.",
+        "actionDate": "2025-05-17"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-100.",
+        "actionDate": "2025-05-17"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-05-06"
+      },
+      {
+        "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-14"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-13"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -1839,6 +2208,27 @@
     ],
     "cosponsorCount": 8,
     "updatedDate": "2025-11-20T09:06:48Z",
+    "stageDates": {
+      "introduced": "2025-02-13",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-21"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-13"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -2118,6 +2508,19 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-11-18T09:05:32Z",
+    "stageDates": {
+      "introduced": "2025-02-18",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -2420,6 +2823,35 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-02T08:32:18Z",
+    "stageDates": {
+      "introduced": "2025-02-18",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-10"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-03-10"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -2578,6 +3010,47 @@
     ],
     "cosponsorCount": 9,
     "updatedDate": "2025-10-09T03:26:17Z",
+    "stageDates": {
+      "introduced": "2025-02-25",
+      "passedHouse": "2025-05-19",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-20"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-102.",
+        "actionDate": "2025-05-19"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-102.",
+        "actionDate": "2025-05-19"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-05-06"
+      },
+      {
+        "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-21"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-25"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -2607,6 +3080,23 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-12-02T08:18:13Z",
+    "stageDates": {
+      "introduced": "2025-02-27",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-03-27"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-27"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -2636,6 +3126,23 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-07-24T14:39:49Z",
+    "stageDates": {
+      "introduced": "2025-02-27",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-27"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-27"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -2910,6 +3417,27 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-02T09:05:59Z",
+    "stageDates": {
+      "introduced": "2025-03-05",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-03-27"
+      },
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-03-05"
+      },
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-03-05"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -3199,6 +3727,27 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-11-18T09:05:42Z",
+    "stageDates": {
+      "introduced": "2025-03-03",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-11"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-03-27"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-06"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -3476,6 +4025,27 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-03T10:39:51Z",
+    "stageDates": {
+      "introduced": "2025-03-11",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-27"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-11"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -3568,6 +4138,27 @@
     ],
     "cosponsorCount": 5,
     "updatedDate": "2025-10-04T08:05:56Z",
+    "stageDates": {
+      "introduced": "2025-03-11",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-12"
+      },
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-03-31"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-11"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -3848,6 +4439,27 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-03T14:28:06Z",
+    "stageDates": {
+      "introduced": "2025-03-14",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-04-04"
+      },
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-03-14"
+      },
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-03-14"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -3977,6 +4589,35 @@
     ],
     "cosponsorCount": 8,
     "updatedDate": "2025-12-02T09:05:58Z",
+    "stageDates": {
+      "introduced": "2025-03-14",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-14"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -4142,6 +4783,27 @@
     ],
     "cosponsorCount": 11,
     "updatedDate": "2025-11-27T23:02:15Z",
+    "stageDates": {
+      "introduced": "2025-03-14",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-03-26"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-14"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -4269,6 +4931,31 @@
     ],
     "cosponsorCount": 8,
     "updatedDate": "2025-12-02T08:36:21Z",
+    "stageDates": {
+      "introduced": "2025-03-14",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-12"
+      },
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-04-04"
+      },
+      {
+        "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-03-14"
+      },
+      {
+        "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-03-14"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -4361,6 +5048,47 @@
     ],
     "cosponsorCount": 5,
     "updatedDate": "2025-10-09T03:26:15Z",
+    "stageDates": {
+      "introduced": "2025-03-18",
+      "passedHouse": "2025-05-19",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-20"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-98.",
+        "actionDate": "2025-05-17"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-98.",
+        "actionDate": "2025-05-17"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-05-06"
+      },
+      {
+        "text": "Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote.",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2025-04-09"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-04-04"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -4405,6 +5133,43 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-11-19T09:07:25Z",
+    "stageDates": {
+      "introduced": "2025-03-25",
+      "passedHouse": "2025-09-15",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-09-16"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-261.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-261.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Economic Opportunity Discharged",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-06-11"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-25"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -4684,6 +5449,43 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-10-02T21:06:13Z",
+    "stageDates": {
+      "introduced": "2025-04-02",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-310.",
+        "actionDate": "2025-09-26"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-310.",
+        "actionDate": "2025-09-26"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Health Discharged",
+        "actionDate": "2025-07-03"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-12"
+      },
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-04-11"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-02"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -4958,6 +5760,19 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-02T09:05:33Z",
+    "stageDates": {
+      "introduced": "2025-04-03",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-03"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -5250,6 +6065,43 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-11-30T06:53:18Z",
+    "stageDates": {
+      "introduced": "2025-04-07",
+      "passedHouse": "2025-09-15",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-258.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-258.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
+        "actionDate": "2025-07-03"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-04-21"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-07"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -5280,6 +6132,47 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-10-02T18:26:13Z",
+    "stageDates": {
+      "introduced": "2025-04-08",
+      "passedHouse": "2025-09-16",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-09-17"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-274.",
+        "actionDate": "2025-09-15"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-274.",
+        "actionDate": "2025-09-15"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
+        "actionDate": "2025-07-03"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-04-22"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-08"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -5419,6 +6312,23 @@
     ],
     "cosponsorCount": 9,
     "updatedDate": "2025-12-02T08:15:05Z",
+    "stageDates": {
+      "introduced": "2025-04-10",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-04-10"
+      },
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-04-10"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -5487,6 +6397,43 @@
     ],
     "cosponsorCount": 2,
     "updatedDate": "2025-10-15T17:06:12Z",
+    "stageDates": {
+      "introduced": "2025-04-30",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-339.",
+        "actionDate": "2025-10-08"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-339.",
+        "actionDate": "2025-10-08"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-05-15"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-30"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -5758,6 +6705,23 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-03T09:06:36Z",
+    "stageDates": {
+      "introduced": "2025-05-01",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-05-06"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-01"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -5800,6 +6764,27 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-10-09T03:26:14Z",
+    "stageDates": {
+      "introduced": "2025-05-14",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-11"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-06-06"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-14"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -5829,6 +6814,31 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-06-26T17:47:05Z",
+    "stageDates": {
+      "introduced": "2025-05-14",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-11"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-06-06"
+      },
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-05-14"
+      },
+      {
+        "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+        "actionDate": "2025-05-14"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6009,6 +7019,47 @@
     ],
     "cosponsorCount": 12,
     "updatedDate": "2025-09-29T22:41:12Z",
+    "stageDates": {
+      "introduced": "2025-05-14",
+      "passedHouse": "2025-09-15",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-09-16"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-263.",
+        "actionDate": "2025-09-10"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-263.",
+        "actionDate": "2025-09-10"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Health Discharged",
+        "actionDate": "2025-07-03"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-12"
+      },
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-06-06"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-14"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -6101,6 +7152,47 @@
     ],
     "cosponsorCount": 4,
     "updatedDate": "2025-12-02T08:30:27Z",
+    "stageDates": {
+      "introduced": "2025-05-19",
+      "passedHouse": "2025-09-17",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-09-18"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-257.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-257.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Economic Opportunity Discharged",
+        "actionDate": "2025-07-03"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-11"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-06-11"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-19"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6193,6 +7285,27 @@
     ],
     "cosponsorCount": 5,
     "updatedDate": "2025-12-02T09:05:48Z",
+    "stageDates": {
+      "introduced": "2025-05-29",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-06-06"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-05-29"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6260,6 +7373,23 @@
     ],
     "cosponsorCount": 3,
     "updatedDate": "2025-11-19T09:07:18Z",
+    "stageDates": {
+      "introduced": "2025-06-04",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-06-17"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-06-04"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6447,6 +7577,23 @@
     ],
     "cosponsorCount": 13,
     "updatedDate": "2025-12-02T09:05:55Z",
+    "stageDates": {
+      "introduced": "2025-06-05",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2025-06-17"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-06-05"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6527,6 +7674,27 @@
     ],
     "cosponsorCount": 4,
     "updatedDate": "2025-12-02T08:43:56Z",
+    "stageDates": {
+      "introduced": "2025-06-09",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-06-23"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-06-09"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6556,6 +7724,43 @@
     "cosponsors": [],
     "cosponsorCount": 0,
     "updatedDate": "2025-10-25T13:26:14Z",
+    "stageDates": {
+      "introduced": "2025-06-09",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-349.",
+        "actionDate": "2025-10-21"
+      },
+      {
+        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-349.",
+        "actionDate": "2025-10-21"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-06-17"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-06-09"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6734,6 +7939,27 @@
     ],
     "cosponsorCount": 12,
     "updatedDate": "2025-12-02T08:40:18Z",
+    "stageDates": {
+      "introduced": "2025-06-09",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-06-23"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-06-09"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6790,6 +8016,47 @@
     ],
     "cosponsorCount": 2,
     "updatedDate": "2025-09-25T19:26:12Z",
+    "stageDates": {
+      "introduced": "2025-06-12",
+      "passedHouse": "2025-09-15",
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-09-16"
+      },
+      {
+        "text": "Reported by the Committee on Veterans' Affairs. H. Rept. 119-259.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Reported by the Committee on Veterans' Affairs. H. Rept. 119-259.",
+        "actionDate": "2025-09-09"
+      },
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2025-07-23"
+      },
+      {
+        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
+        "actionDate": "2025-07-03"
+      },
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-06-23"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-06-12"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -6847,6 +8114,27 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-06-27T16:15:02Z",
+    "stageDates": {
+      "introduced": "2025-06-12",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2025-06-24"
+      },
+      {
+        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
+        "actionDate": "2025-06-23"
+      },
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-06-12"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -6963,6 +8251,19 @@
     ],
     "cosponsorCount": 7,
     "updatedDate": "2025-11-21T12:04:36Z",
+    "stageDates": {
+      "introduced": "2025-08-01",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Referred to the House Committee on Veterans' Affairs.",
+        "actionDate": "2025-08-01"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -7126,6 +8427,27 @@
     ],
     "cosponsorCount": 12,
     "updatedDate": "2025-12-02T08:32:46Z",
+    "stageDates": {
+      "introduced": "2025-01-28",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-01-28"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -7378,6 +8700,23 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-03T12:44:56Z",
+    "stageDates": {
+      "introduced": "2025-02-06",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-06"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -7441,6 +8780,23 @@
     ],
     "cosponsorCount": 3,
     "updatedDate": "2025-06-02T20:14:31Z",
+    "stageDates": {
+      "introduced": "2025-02-13",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-13"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -7671,6 +9027,23 @@
     ],
     "cosponsorCount": 18,
     "updatedDate": "2025-12-02T08:30:34Z",
+    "stageDates": {
+      "introduced": "2025-02-13",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-13"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -7814,6 +9187,23 @@
     ],
     "cosponsorCount": 10,
     "updatedDate": "2025-10-23T11:18:15Z",
+    "stageDates": {
+      "introduced": "2025-02-18",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -7888,6 +9278,35 @@
     ],
     "cosponsorCount": 3,
     "updatedDate": "2025-12-03T12:03:22Z",
+    "stageDates": {
+      "introduced": "2025-02-18",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with an amendment in the nature of a substitute and an amendment to the title. Without written report.",
+        "actionDate": "2025-12-02"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with an amendment in the nature of a substitute and an amendment to the title. Without written report.",
+        "actionDate": "2025-12-02"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -7928,6 +9347,19 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-10-09T11:03:14Z",
+    "stageDates": {
+      "introduced": "2025-02-18",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -7968,6 +9400,35 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-12-03T12:03:22Z",
+    "stageDates": {
+      "introduced": "2025-02-18",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran without amendment. Without written report.",
+        "actionDate": "2025-12-02"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran without amendment. Without written report.",
+        "actionDate": "2025-12-02"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported without amendment favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8075,6 +9536,23 @@
     ],
     "cosponsorCount": 7,
     "updatedDate": "2025-12-03T10:39:54Z",
+    "stageDates": {
+      "introduced": "2025-02-18",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-18"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -8160,6 +9638,23 @@
     ],
     "cosponsorCount": 4,
     "updatedDate": "2025-12-03T12:03:22Z",
+    "stageDates": {
+      "introduced": "2025-02-20",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-20"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8200,6 +9695,35 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-12-03T15:17:20Z",
+    "stageDates": {
+      "introduced": "2025-02-27",
+      "passedHouse": null,
+      "passedSenate": "2025-11-09",
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with an amendment in the nature of a substitute. Without written report.",
+        "actionDate": "2025-10-22"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with an amendment in the nature of a substitute. Without written report.",
+        "actionDate": "2025-10-22"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-27"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8252,6 +9776,23 @@
     ],
     "cosponsorCount": 2,
     "updatedDate": "2025-12-02T08:31:56Z",
+    "stageDates": {
+      "introduced": "2025-02-27",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-27"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8293,6 +9834,19 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-10-09T03:26:17Z",
+    "stageDates": {
+      "introduced": "2025-02-27",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-27"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8345,6 +9899,27 @@
     ],
     "cosponsorCount": 2,
     "updatedDate": "2025-11-21T12:03:19Z",
+    "stageDates": {
+      "introduced": "2025-02-27",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-02-27"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8420,6 +9995,27 @@
     ],
     "cosponsorCount": 4,
     "updatedDate": "2025-09-12T16:20:19Z",
+    "stageDates": {
+      "introduced": "2025-03-04",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-04"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8483,6 +10079,27 @@
     ],
     "cosponsorCount": 3,
     "updatedDate": "2025-12-02T08:35:59Z",
+    "stageDates": {
+      "introduced": "2025-03-06",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-06"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8546,6 +10163,23 @@
     ],
     "cosponsorCount": 3,
     "updatedDate": "2025-05-21T19:38:52Z",
+    "stageDates": {
+      "introduced": "2025-03-06",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-03-11"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-03-06"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8801,6 +10435,19 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-03T14:28:06Z",
+    "stageDates": {
+      "introduced": "2025-03-13",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Read twice and referred to the Committee on Armed Services.",
+        "actionDate": "2025-03-13"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -8955,6 +10602,23 @@
     ],
     "cosponsorCount": 11,
     "updatedDate": "2025-12-02T08:25:38Z",
+    "stageDates": {
+      "introduced": "2025-04-01",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-01"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -9221,6 +10885,35 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-12-02T23:02:35Z",
+    "stageDates": {
+      "introduced": "2025-04-07",
+      "passedHouse": null,
+      "passedSenate": "2025-11-20",
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran without amendment. With written report No. 119-89.",
+        "actionDate": "2025-10-22"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran without amendment. With written report No. 119-89.",
+        "actionDate": "2025-10-22"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported without amendment favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-07"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [
@@ -9364,6 +11057,35 @@
     ],
     "cosponsorCount": 9,
     "updatedDate": "2025-12-03T12:03:22Z",
+    "stageDates": {
+      "introduced": "2025-04-08",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with amendments. Without written report.",
+        "actionDate": "2025-12-02"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with amendments. Without written report.",
+        "actionDate": "2025-12-02"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with amendments favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-08"
+      }
+    ],
     "hasWaSponsor": true,
     "waSponsor": {
       "bioguideId": "M001111",
@@ -9630,6 +11352,27 @@
     ],
     "cosponsorCount": 20,
     "updatedDate": "2025-10-04T11:03:13Z",
+    "stageDates": {
+      "introduced": "2025-04-10",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-10"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -9671,6 +11414,27 @@
     ],
     "cosponsorCount": 1,
     "updatedDate": "2025-10-07T18:20:14Z",
+    "stageDates": {
+      "introduced": "2025-04-30",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+        "actionDate": "2025-07-30"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-30"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
@@ -9744,6 +11508,23 @@
     ],
     "cosponsorCount": 4,
     "updatedDate": "2025-07-03T20:14:45Z",
+    "stageDates": {
+      "introduced": "2025-04-30",
+      "passedHouse": null,
+      "passedSenate": null,
+      "toPresident": null,
+      "becameLaw": null
+    },
+    "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Hearings held.",
+        "actionDate": "2025-05-21"
+      },
+      {
+        "text": "Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2025-04-30"
+      }
+    ],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
