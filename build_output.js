@@ -30,11 +30,12 @@ function getChamber(num) {
   return senateBills.includes(Number(num)) ? "s" : "hr";
 }
 
-async function fetchBill(chamber, number) {
+async function fetchBillDetails(chamber, number) {
   const url = `https://api.congress.gov/v3/bill/119/${chamber}/${number}?api_key=${apiKey}&format=json`;
+
   const res = await fetch(url);
   if (!res.ok) {
-    console.log(`Failed to fetch ${chamber.toUpperCase()}. ${number} (${res.status})`);
+    console.log(`Failed bill fetch for ${chamber.toUpperCase()}. ${number} (${res.status})`);
     return null;
   }
   const json = await res.json();
@@ -44,35 +45,38 @@ async function fetchBill(chamber, number) {
 async function fetchCosponsors(bill) {
   if (!bill.cosponsors || !bill.cosponsors.url) return [];
 
-  let url = bill.cosponsors.url;
-  if (!url.includes("api_key")) {
-    url += (url.includes("?") ? "&" : "?") + `api_key=${apiKey}`;
-  }
+  let url = bill.cosponsors.url.includes("api_key")
+    ? bill.cosponsors.url
+    : `${bill.cosponsors.url}&api_key=${apiKey}`;
 
   try {
     const res = await fetch(url);
-    if (!res.ok) {
-      console.log(`Cosponsor fetch failed (${res.status}) for ${bill.number}`);
-      return [];
-    }
+    if (!res.ok) return [];
     const json = await res.json();
 
-    const list =
-      json.cosponsors ||
-      json.items ||
-      json.data ||
-      [];
-
+    // Congress.gov returns cosponsors in different keys depending on endpoint structure
+    const list = json?.cosponsors || json?.data || json?.items || [];
     return Array.isArray(list) ? list : [];
+
   } catch {
     return [];
   }
 }
 
-function extractRecord(bill, chamber, number, waSponsor, waCosponsors) {
+function isWA(person) {
+  const st = (person.state || person.stateCode || "").toUpperCase();
+  return st === "WA";
+}
+
+function extractRecord(bill, chamber, number, cosponsors) {
   const label = `${chamber === "hr" ? "H.R." : "S."} ${number}`;
   const latestText = bill.latestAction?.text || "";
   const latestDate = bill.latestAction?.actionDate || "";
+
+  const sponsor = bill.sponsors?.[0] || null;
+  const waSponsor = sponsor && isWA(sponsor) ? sponsor : null;
+
+  const waCosp = cosponsors.filter(isWA);
 
   return {
     id: `${chamber}${number}`,
@@ -84,34 +88,33 @@ function extractRecord(bill, chamber, number, waSponsor, waCosponsors) {
     actionDate: latestDate,
     step: determineStep(latestText),
     legislationUrl: bill.legislationUrl || "",
-    sponsor: bill.sponsors?.[0] || null,
-    cosponsorCount: bill.cosponsors?.count ?? 0,
+
+    // FULL sponsor object
+    sponsor,
+
+    // FULL cosponsor list
+    cosponsors: cosponsors,
+
+    cosponsorCount: cosponsors.length,
     updatedDate: bill.updateDate || bill.updateDateIncludingText || null,
 
-    // Washington-specific fields
+    // WA-specific fields
     hasWaSponsor: !!waSponsor,
-    waSponsor: waSponsor || null,
-    waCosponsors,
-    waCosponsorCount: waCosponsors.length
+    waSponsor: waSponsor,
+    waCosponsors: waCosp,
+    waCosponsorCount: waCosp.length
   };
 }
 
-function isWA(person) {
-  if (!person) return false;
-  const st = (person.state || person.stateCode || "").toUpperCase();
-  return st === "WA";
-}
-
 async function run() {
-  console.log("Building compact bills.json snapshot with WA filters…");
+  console.log("Building complete bills.json with full cosponsor lists…");
 
   const allNumbers = [...houseBills, ...senateBills];
   const results = {};
 
   let previous = {};
   try {
-    const prevRaw = fs.readFileSync("bills.json", "utf8");
-    previous = JSON.parse(prevRaw);
+    previous = JSON.parse(fs.readFileSync("bills.json", "utf8"));
   } catch {
     previous = {};
   }
@@ -120,20 +123,16 @@ async function run() {
 
   for (const num of allNumbers) {
     const chamber = getChamber(num);
-    console.log(`Summarizing ${chamber.toUpperCase()}. ${num}…`);
+    console.log(`Processing ${chamber.toUpperCase()}. ${num}…`);
 
-    const bill = await fetchBill(chamber, num);
+    const bill = await fetchBillDetails(chamber, num);
     if (!bill) continue;
 
-    const sponsors = bill.sponsors || [];
-    const waSponsor = sponsors.find(isWA) || null;
+    const cosponsors = await fetchCosponsors(bill);
 
-    const cosponsorList = await fetchCosponsors(bill);
-    const waCosponsors = cosponsorList.filter(isWA);
+    const record = extractRecord(bill, chamber, num, cosponsors);
 
-    const record = extractRecord(bill, chamber, num, waSponsor, waCosponsors);
     const id = record.id;
-
     const oldRec = previous[id] ? JSON.stringify(previous[id]) : null;
     const newRec = JSON.stringify(record);
 
@@ -146,13 +145,13 @@ async function run() {
 
   fs.writeFileSync("bills.json", JSON.stringify(results, null, 2));
 
-  if (changedIds.length === 0) {
-    console.log("No bill changes detected.");
-  } else {
+  if (changedIds.length) {
     console.log("Changed bills:", changedIds.join(", "));
+  } else {
+    console.log("No changes detected.");
   }
 
-  console.log("bills.json written.");
+  console.log("bills.json updated successfully.");
 }
 
 run();
