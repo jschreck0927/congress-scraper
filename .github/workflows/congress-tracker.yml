@@ -1,11 +1,12 @@
 name: Congress Tracker
+
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # runs every 6 hours
-  workflow_dispatch:        # lets you run it manually
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:        # allow manual runs
 
 jobs:
   track_bills:
@@ -13,31 +14,31 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run scraper
+      - name: Run scraper and build snapshot
         env:
-          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+          CONGRESS_API_KEY: A6Ah5qMutteKToBfqUNznkl5PP2WGfDl1Ybid7XS
         run: |
           node scrape_bills.js
           node build_output.js
 
-           - name: Commit updated bill data
+      - name: Commit updated bill data
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
 
           git add bills.json
 
-          # If nothing actually changed, stop here
+          # If there are no changes, skip commit/push
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
