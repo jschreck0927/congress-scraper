@@ -2,10 +2,7 @@
   "name": "congress-scraper",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "test": "playwright test"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.45.0"
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
