@@ -1,4 +1,6 @@
 name: Congress Tracker
+permissions:
+  contents: write
 
 on:
   schedule:
@@ -28,10 +30,18 @@ jobs:
           node scrape_bills.js
           node build_output.js
 
-      - name: Commit updated bill data
+           - name: Commit updated bill data
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
+
           git add bills.json
-          git diff --quiet && echo "No changes" || git commit -m "Update bill data"
+
+          # If nothing actually changed, stop here
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update bill data"
           git push
