@@ -1,7 +1,10 @@
-import { test, expect } from "@playwright/test";
+import { test } from "@playwright/test";
 import fs from "fs/promises";
 
-// House + Senate Bills (ALL YOU LISTED)
+// Give the test plenty of time
+test.setTimeout(300000);
+
+// All House + Senate bills you listed
 const houseBills = [
   467, 530, 647, 659, 740, 785, 913, 965, 980, 981,
   983, 1039, 1228, 1286, 1344, 1404, 1423, 1578, 1646,
@@ -17,131 +20,245 @@ const senateBills = [
 ];
 
 const apiKey = process.env.CONGRESS_API_KEY;
-if (!apiKey) throw new Error("Missing Congress.gov API key.");
-
-// Pull all cosponsors with pagination
-async function getAllCosponsors(type, number) {
-  const base = `https://api.congress.gov/v3/bill/119/${type}/${number}/cosponsors?api_key=${apiKey}&format=json`;
-
-  let page = 1;
-  let totalPages = 1;
-  let results = [];
-
-  do {
-    const url = `${base}&page=${page}`;
-    const res = await fetch(url);
-    if (!res.ok) break;
-
-    const json = await res.json();
-
-    let cosArr = [];
-    if (Array.isArray(json.cosponsors)) {
-      cosArr = json.cosponsors;
-    } else if (Array.isArray(json.cosponsors?.cosponsors)) {
-      cosArr = json.cosponsors.cosponsors;
-    }
-
-    results = results.concat(cosArr);
-
-    totalPages = json.pagination?.totalPages || 1;
-    page++;
-  } while (page <= totalPages);
-
-  return results;
+if (!apiKey) {
+  throw new Error("Missing CONGRESS_API_KEY environment variable.");
 }
 
-// Extract all WA delegation from list
-function getWA(list) {
-  return list.filter(c => (c.state || "").toUpperCase() === "WA");
+// --- Helpers ---
+
+function isWA(person) {
+  return (person?.state || person?.stateCode || "").toUpperCase() === "WA";
 }
 
-// Fetch full bill data, sponsor, all cosponsors, committees, etc.
-async function fetchBill(type, number) {
+function extractStateFromName(fullName) {
+  if (!fullName) return null;
+  const m = fullName.match(/\[[A-Z]-([A-Z]{2})-/);
+  return m ? m[1] : null;
+}
+
+function extractBioguideFromHref(href) {
+  if (!href) return null;
+  const m = href.match(/\/member\/[^/]+\/([A-Z0-9]+)$/);
+  return m ? m[1] : null;
+}
+
+function ensureStageDates(billJson) {
+  const stageDates = billJson.stageDates || {};
+  if (!stageDates.introduced) {
+    stageDates.introduced = billJson.introducedDate || billJson.actionDate || null;
+  }
+  if (!("passedHouse" in stageDates)) stageDates.passedHouse = null;
+  if (!("passedSenate" in stageDates)) stageDates.passedSenate = null;
+  if (!("toPresident" in stageDates)) stageDates.toPresident = null;
+  if (!("becameLaw" in stageDates)) stageDates.becameLaw = null;
+  return stageDates;
+}
+
+// --- API metadata: title, sponsor, latest action, introduced date, etc. ---
+
+async function fetchBillMetadata(type, number) {
   const url = `https://api.congress.gov/v3/bill/119/${type}/${number}?api_key=${apiKey}&format=json`;
-
-  try {
-    const res = await fetch(url);
-    if (!res.ok) {
-      console.log(`✗ API error for ${type.toUpperCase()} ${number}`);
-      return null;
-    }
-
-    const json = await res.json();
-    const bill = json.bill;
-
-    // Sponsor
-    const sponsor = bill.sponsors?.[0] || null;
-
-    // Full cosponsor list
-    const allCosponsors = await getAllCosponsors(type, number);
-    const waCosponsors = getWA(allCosponsors);
-
-    // WA sponsor?
-    const waSponsor =
-      sponsor && (sponsor.state || "").toUpperCase() === "WA"
-        ? sponsor
-        : null;
-
-    // Latest action
-    const latestAction = bill.latestAction?.text || "None";
-
-    // Extract any committee/subcommittee text
-    let committeeActions = [];
-
-    if (bill.commitees || bill.committees) {
-      // Use API committee list if available
-      const committeeGroups = bill.committees?.count || 0;
-      // Optional: fetch committee endpoint if needed
-    }
-
-    const output = {
-      id: `${type}${number}`,
-      chamber: type,
-      number: number.toString(),
-      label: `${type.toUpperCase()}. ${number}`,
-      title: bill.title || "No title available",
-      latestAction: latestAction,
-      actionDate: bill.latestAction?.actionDate || null,
-      introducedDate: bill.introducedDate || null,
-      step: bill.latestAction?.text || "Introduced",
-      legislationUrl: bill.legislationUrl,
-
-      sponsor,
-      cosponsors: allCosponsors,
-      cosponsorCount: allCosponsors.length,
-
-      hasWaSponsor: !!waSponsor,
-      waSponsor,
-      waCosponsors,
-      waCosponsorCount: waCosponsors.length,
-
-      committeeActions
-    };
-
-    console.log(`✓ Success: ${type.toUpperCase()} ${number} (WA: ${waCosponsors.length})`);
-    return output;
-
-  } catch (err) {
-    console.log(`✗ Failed to fetch ${type} ${number}`, err);
+  const res = await fetch(url);
+  if (!res.ok) {
+    console.log(`API error for ${type.toUpperCase()} ${number}: ${res.status}`);
     return null;
   }
+  const json = await res.json();
+  const bill = json.bill;
+
+  const sponsor = bill.sponsors?.[0] || null;
+  const latestAction = bill.latestAction?.text || "None";
+  const actionDate = bill.latestAction?.actionDate || null;
+  const introducedDate = bill.introducedDate || null;
+
+  // Simple committee activity from actions endpoint
+  let committeeActions = [];
+  try {
+    const actionsUrl = `https://api.congress.gov/v3/bill/119/${type}/${number}/actions?api_key=${apiKey}&format=json`;
+    const actionsRes = await fetch(actionsUrl);
+    if (actionsRes.ok) {
+      const actionsJson = await actionsRes.json();
+      const actionList = actionsJson.actions?.actions || actionsJson.actions || [];
+      committeeActions = actionList
+        .filter(a => /committee|subcommittee/i.test(a.text || ""))
+        .map(a => ({
+          text: a.text,
+          actionDate: a.actionDate || null
+        }));
+    }
+  } catch (e) {
+    console.log(`Failed to fetch committee actions for ${type.toUpperCase()} ${number}`, e);
+  }
+
+  const billJson = {
+    id: `${type}${number}`,
+    chamber: type,
+    number: number.toString(),
+    label: `${type.toUpperCase()}. ${number}`,
+    title: bill.title || "No title available",
+    latestAction,
+    actionDate,
+    introducedDate,
+    step: bill.latestAction?.text ? "Introduced" : "Introduced",
+    legislationUrl: bill.legislationUrl,
+    sponsor,
+    updatedDate: bill.updateDate || bill.updateDateIncludingText || null,
+    committeeActions
+  };
+
+  billJson.stageDates = ensureStageDates(billJson);
+  return billJson;
 }
 
-test("Fetch all bills with WA sponsors/cosponsors and save to bills.json", async () => {
+// --- HTML cosponsor scraping with Playwright ---
+
+async function scrapeCosponsorsFromHtml(page, type, number) {
+  const baseUrl = `https://www.congress.gov/bill/119th-congress/${type === "hr" ? "house-bill" : "senate-bill"}/${number}/cosponsors`;
+
+  let pageNum = 1;
+  let all = [];
+
+  while (true) {
+    const url = pageNum === 1 ? baseUrl : `${baseUrl}?page=${pageNum}`;
+    console.log(`  Scraping cosponsors HTML: ${url}`);
+    await page.goto(url, { waitUntil: "networkidle", timeout: 120000 });
+
+    const pageData = await page.$$eval(
+      'table.item_table tbody tr, table.item-table tbody tr, table tbody tr',
+      rows => {
+        return rows
+          .map(row => {
+            const tds = Array.from(row.querySelectorAll("td"));
+            if (!tds.length) return null;
+
+            // First cell: name/link
+            const nameCell = tds[0];
+            const link = nameCell.querySelector("a");
+            const fullName = nameCell.innerText.trim();
+
+            // Last cell often date
+            const dateCell = tds[tds.length - 1];
+            const sponsorshipDate = dateCell ? dateCell.innerText.trim() : null;
+
+            // A middle cell may contain "Original", etc.
+            let isOriginalCosponsor = false;
+            for (let i = 1; i < tds.length - 1; i++) {
+              const txt = tds[i].innerText.toLowerCase();
+              if (txt.includes("original")) {
+                isOriginalCosponsor = true;
+                break;
+              }
+            }
+
+            const href = link ? link.getAttribute("href") : null;
+
+            return {
+              fullName,
+              sponsorshipDate,
+              isOriginalCosponsor,
+              state: null, // filled below
+              bioguideId: href ? href.replace(/.*\/member\/[^/]+\//, "") || null : null,
+              memberUrl: href || null
+            };
+          })
+          .filter(Boolean);
+      }
+    );
+
+    // If no cosponsors found on this page, stop
+    if (!pageData.length) break;
+
+    all = all.concat(pageData);
+
+    // Try to detect a Next link
+    const hasNext = await page.$('a[aria-label="Next"], a.next, a:has-text("Next")');
+    if (!hasNext) break;
+
+    pageNum++;
+  }
+
+  // Fill state from fullName
+  all = all.map(c => ({
+    ...c,
+    state: c.state || extractStateFromName(c.fullName)
+  }));
+
+  return all;
+}
+
+// --- Main test: fetch metadata + HTML cosponsors, then write bills.json ---
+
+test("scrape Congress.gov (API + HTML) and write bills.json", async ({ page }) => {
   const results = {};
 
   // HOUSE
   for (const num of houseBills) {
-    const bill = await fetchBill("hr", num);
-    if (bill) results[bill.id] = bill;
+    console.log(`\n=== H.R. ${num} ===`);
+    const meta = await fetchBillMetadata("hr", num);
+    if (!meta) {
+      console.log(`Skipping H.R. ${num} (metadata error)`);
+      continue;
+    }
+
+    // Scrape ALL cosponsors via HTML (full list, including WA)
+    const cosponsors = await scrapeCosponsorsFromHtml(page, "hr", num);
+
+    // WA delegation
+    const waCosponsors = cosponsors.filter(c => (c.state || "").toUpperCase() === "WA");
+    const sponsor = meta.sponsor;
+    const hasWaSponsor = sponsor ? isWA(sponsor) : false;
+    const waSponsor = hasWaSponsor ? sponsor : null;
+
+    const billJson = {
+      ...meta,
+      cosponsors,
+      cosponsorCount: cosponsors.length,
+      hasWaSponsor,
+      waSponsor,
+      waCosponsors,
+      waCosponsorCount: waCosponsors.length
+    };
+
+    results[billJson.id] = billJson;
+
+    console.log(
+      `  → Cosponsors: ${billJson.cosponsorCount}, WA cosponsors: ${billJson.waCosponsorCount}`
+    );
   }
 
   // SENATE
   for (const num of senateBills) {
-    const bill = await fetchBill("s", num);
-    if (bill) results[bill.id] = bill;
+    console.log(`\n=== S. ${num} ===`);
+    const meta = await fetchBillMetadata("s", num);
+    if (!meta) {
+      console.log(`Skipping S. ${num} (metadata error)`);
+      continue;
+    }
+
+    const cosponsors = await scrapeCosponsorsFromHtml(page, "s", num);
+
+    const waCosponsors = cosponsors.filter(c => (c.state || "").toUpperCase() === "WA");
+    const sponsor = meta.sponsor;
+    const hasWaSponsor = sponsor ? isWA(sponsor) : false;
+    const waSponsor = hasWaSponsor ? sponsor : null;
+
+    const billJson = {
+      ...meta,
+      cosponsors,
+      cosponsorCount: cosponsors.length,
+      hasWaSponsor,
+      waSponsor,
+      waCosponsors,
+      waCosponsorCount: waCosponsors.length
+    };
+
+    results[billJson.id] = billJson;
+
+    console.log(
+      `  → Cosponsors: ${billJson.cosponsorCount}, WA cosponsors: ${billJson.waCosponsorCount}`
+    );
   }
 
   await fs.writeFile("bills.json", JSON.stringify(results, null, 2));
-  console.log("✔ bills.json updated successfully.");
+  console.log("\n✔ bills.json updated successfully.");
 });
