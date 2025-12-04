@@ -1,4 +1,9 @@
 import fetch from "node-fetch";
+import fs from "fs";
+import path from "path";
+
+// WA extraction helper
+import { extractWashington } from "./congress_api/utils/extractWashington.js";
 
 const apiKey = process.env.CONGRESS_API_KEY;
 
@@ -22,10 +27,9 @@ const senateBills = [
 // Combined
 const bills = [...houseBills, ...senateBills];
 
-// Detect chamber
+// Chamber detection
 function getChamber(billNumber) {
-  if (senateBills.includes(billNumber)) return "s";
-  return "hr";
+  return senateBills.includes(billNumber) ? "s" : "hr";
 }
 
 // Build Congress.gov API URL
@@ -34,10 +38,63 @@ function buildUrl(billNumber) {
   return `https://api.congress.gov/v3/bill/119/${chamber}/${billNumber}?api_key=${apiKey}`;
 }
 
-// Fetch bill data
+// Normalize bill sponsor
+function normalizeSponsor(sponsor) {
+  if (!sponsor) return null;
+
+  return {
+    bioguideId: sponsor.bioguideId,
+    firstName: sponsor.firstName,
+    lastName: sponsor.lastName,
+    middleName: sponsor.middleName || "",
+    fullName: sponsor.fullName || "",
+    party: sponsor.party || "",
+    state: sponsor.state || "",
+    district: sponsor.district || null,
+    isByRequest: sponsor.isByRequest || "N",
+    url: sponsor.url || ""
+  };
+}
+
+// Normalize cosponsors
+function normalizeCosponsors(list) {
+  if (!list) return [];
+  return list.map(c => ({
+    bioguideId: c.bioguideId,
+    firstName: c.firstName,
+    lastName: c.lastName,
+    middleName: c.middleName || "",
+    fullName: c.fullName || "",
+    party: c.party || "",
+    state: c.state || "",
+    district: c.district || null,
+    isOriginalCosponsor: c.isOriginalCosponsor || false,
+    sponsorshipDate: c.sponsorshipDate || "",
+    url: c.url || ""
+  }));
+}
+
+// Pull simplified bill data
+function extractBillData(apiObj, billNumber) {
+  const chamber = getChamber(billNumber);
+  const bill = apiObj.bill;
+
+  return {
+    id: `${chamber}${billNumber}`,
+    chamber,
+    number: billNumber,
+    label: `${chamber.toUpperCase()}. ${billNumber}`,
+    title: bill.title || "",
+    latestAction: bill.latestAction?.text || "",
+    actionDate: bill.latestAction?.actionDate || "",
+    sponsor: normalizeSponsor(bill.sponsors?.[0]),
+    cosponsors: normalizeCosponsors(bill.cosponsors)
+  };
+}
+
+// Fetch bill data from Congress.gov
 async function getBillData(billNumber) {
   const url = buildUrl(billNumber);
-
   const response = await fetch(url);
 
   if (!response.ok) {
@@ -48,29 +105,40 @@ async function getBillData(billNumber) {
   return data;
 }
 
-// Run scraper
+// Main scraper runner
 async function run() {
-  console.log("Starting Congress bill update check...\n");
+  console.log("Starting Congress bill update...\n");
+
+  const output = {};
 
   for (const bill of bills) {
     const chamber = getChamber(bill).toUpperCase();
-
     console.log(`Checking ${chamber}. ${bill}...`);
 
     try {
-      const info = await getBillData(bill);
+      const apiData = await getBillData(bill);
+      const cleanBill = extractBillData(apiData, bill);
 
-      console.log(`✓ Success: ${chamber}. ${bill}`);
-      console.log(JSON.stringify(info, null, 2));
-      console.log("\n--------------------------------------\n");
+      // Apply WA-only logic
+      extractWashington(cleanBill);
 
+      // Store final bill
+      output[cleanBill.id] = cleanBill;
+
+      console.log(`✓ Success: ${cleanBill.label}`);
     } catch (err) {
       console.log(`✗ Failed: ${chamber}. ${bill} — ${err.message}`);
-      console.log("\n--------------------------------------\n");
     }
+
+    console.log("--------------------------------------\n");
   }
 
+  // Write output file
+  const outPath = path.resolve("bills.json");
+  fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
+
   console.log("All bills processed.");
+  console.log(`Saved to: ${outPath}`);
 }
 
 run();
