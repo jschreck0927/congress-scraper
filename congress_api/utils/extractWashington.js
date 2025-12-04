@@ -15,5 +15,4 @@ function extractWashington(bill) {
   return bill;
 }
 
-module.exports = { extractWashington };
-
+export { extractWashington };
