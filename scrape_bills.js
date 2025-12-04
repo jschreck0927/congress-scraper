@@ -2,13 +2,10 @@
 import fetch from "node-fetch";
 import fs from "fs";
 import path from "path";
-import { extractWashington } from "./congress_api/utils/extractWashington.js";
 
-const apiKey = process.env.CONGRESS_API_KEY;
-
-// ------------------------------------------------------
+// ---------------------------
 // BILL LISTS
-// ------------------------------------------------------
+// ---------------------------
 const houseBills = [
   "467","647","659","740","785","913","965","980","981","983",
   "1039","1228","1286","1344","1404","1423","1578","1646","1741",
@@ -26,21 +23,27 @@ const senateBills = [
 
 const bills = [...houseBills, ...senateBills];
 
+// ---------------------------
+// CONFIG
+// ---------------------------
+const WA_STATE = "WA"; // Keep only Washington
+const apiKey = process.env.CONGRESS_API_KEY;
+
+// ---------------------------
+// HELPERS
+// ---------------------------
 function getChamber(billNumber) {
   return senateBills.includes(billNumber) ? "s" : "hr";
 }
 
-// ------------------------------------------------------
-// API URL BUILDER
-// ------------------------------------------------------
 function buildUrl(billNumber, offset = 0) {
   const chamber = getChamber(billNumber);
   return `https://api.congress.gov/v3/bill/119/${chamber}/${billNumber}?api_key=${apiKey}&offset=${offset}`;
 }
 
-// ------------------------------------------------------
-// PAGINATED COSPONSOR FETCHING
-// ------------------------------------------------------
+// ---------------------------
+// FIXED PAGINATION — ALWAYS GET ALL COSPONSORS
+// ---------------------------
 async function getAllCosponsors(billNumber) {
   let offset = 0;
   let all = [];
@@ -55,148 +58,127 @@ async function getAllCosponsors(billNumber) {
 
     const data = await response.json();
     const cos = data.bill?.cosponsors || [];
+
     all.push(...cos);
 
-    if (!data.pagination || cos.length === 0) break;
-    if (offset + cos.length >= data.pagination.count) break;
+    // Congress.gov uses `next` pagination links
+    if (!data.pagination?.next) break;
 
-    offset += cos.length;
+    offset += 250; // next page
   }
 
   return all;
 }
 
-// ------------------------------------------------------
-// NORMALIZATION HELPERS
-// ------------------------------------------------------
-function normalizeSponsor(x) {
-  if (!x) return null;
+// ---------------------------
+// FILTER TO WASHINGTON ONLY
+// ---------------------------
+function filterWashingtonOnly(data) {
+  const waSponsor =
+    data.sponsor && data.sponsor.state === WA_STATE ? data.sponsor : null;
+
+  const waCosponsors = data.cosponsors.filter(c => c.state === WA_STATE);
+
   return {
-    bioguideId: x.bioguideId || "",
-    firstName: x.firstName || "",
-    lastName: x.lastName || "",
-    middleName: x.middleName || "",
-    fullName: x.fullName || "",
-    party: x.party || "",
-    state: x.state || "",
-    district: x.district || null,
-    isByRequest: x.isByRequest || "N",
-    url: x.url || ""
+    ...data,
+    hasWaSponsor: waSponsor !== null,
+    waSponsor,
+    waCosponsors,
+    waCosponsorCount: waCosponsors.length,
   };
 }
 
-function normalizeCosponsors(list) {
-  return list.map(c => ({
-    bioguideId: c.bioguideId || "",
-    firstName: c.firstName || "",
-    lastName: c.lastName || "",
-    middleName: c.middleName || "",
-    fullName: c.fullName || "",
-    party: c.party || "",
-    state: c.state || "",
-    district: c.district || null,
-    isOriginalCosponsor: c.isOriginalCosponsor || false,
-    sponsorshipDate: c.sponsorshipDate || "",
-    url: c.url || ""
-  }));
-}
-
-// ------------------------------------------------------
-// FETCH FIRST PAGE (BASE BILL DETAILS)
-// ------------------------------------------------------
-async function getBillBase(billNumber) {
+// ---------------------------
+// FETCH BASE BILL DATA
+// ---------------------------
+async function fetchBaseBill(billNumber) {
   const url = buildUrl(billNumber);
   const response = await fetch(url);
 
   if (!response.ok) {
-    throw new Error(`Request failed (${response.status})`);
+    throw new Error(`Base bill request failed (${response.status})`);
   }
 
   return await response.json();
 }
 
-// ------------------------------------------------------
-// EXTRACT SIMPLIFIED BILL OBJECT
-// ------------------------------------------------------
-function extractBillData(apiObj, cosponsors, billNumber) {
+// ---------------------------
+// NORMALIZATION
+// ---------------------------
+function normalizeBill(raw, cosponsors, billNumber) {
+  const bill = raw.bill;
   const chamber = getChamber(billNumber);
-  const b = apiObj.bill;
 
   return {
     id: `${chamber}${billNumber}`,
     chamber,
     number: billNumber,
     label: `${chamber.toUpperCase()}. ${billNumber}`,
+    title: bill.title || "",
+    latestAction: bill.latestAction?.text || "",
+    actionDate: bill.latestAction?.actionDate || "",
+    step: bill.currentChamber || "Introduced",
+    legislationUrl: bill.urls?.congressURL || "",
 
-    title: b.title || "",
-    latestAction: b.latestAction?.text || "",
-    actionDate: b.latestAction?.actionDate || "",
+    sponsor: bill.sponsors?.[0] || null,
+    cosponsors: cosponsors,
 
-    sponsor: normalizeSponsor(b.sponsors?.[0] || null),
-    cosponsors: normalizeCosponsors(cosponsors),
     cosponsorCount: cosponsors.length,
-
-    legislationUrl: b.url || "",
     updatedDate: new Date().toISOString(),
 
     stageDates: {
-      introduced: b.introducedDate || null,
-      passedHouse: b.passedHouse || null,
-      passedSenate: b.passedSenate || null,
-      toPresident: b.toPresident || null,
-      becameLaw: b.becameLaw || null
+      introduced: bill.introducedDate || null,
+      passedHouse: bill.passedHouseDate || null,
+      passedSenate: bill.passedSenateDate || null,
+      toPresident: bill.toPresidentDate || null,
+      becameLaw: bill.enactedDate || null
     },
 
-    committeeActions: (b.committees || []).map(c => ({
-      text: c.text || "",
-      actionDate: c.actionDate || null
-    })),
-
-    hasWaSponsor: false,
-    waSponsor: null,
-    waCosponsors: [],
-    waCosponsorCount: 0
+    committeeActions: bill.committeeReports || []
   };
 }
 
-// ------------------------------------------------------
-// MAIN RUNNER
-// ------------------------------------------------------
+// ---------------------------
+// MAIN SCRAPER
+// ---------------------------
 async function run() {
-  console.log("Starting WA-filtered Congress tracker...\n");
+  console.log("=== Washington-Only Congress Scraper ===");
 
   const output = {};
 
   for (const bill of bills) {
-    const label = `${getChamber(bill).toUpperCase()}. ${bill}`;
-    console.log(`→ Processing ${label}...`);
+    const chamber = getChamber(bill).toUpperCase();
+    console.log(`\nChecking ${chamber}. ${bill}...`);
 
     try {
-      // Page 1 (base)
-      const base = await getBillBase(bill);
+      // 1. Fetch page 1
+      const base = await fetchBaseBill(bill);
 
-      // Paginated cosponsors
+      // 2. Fetch ALL cosponsors (multi-page)
       const allCos = await getAllCosponsors(bill);
 
-      // Build clean bill object
-      const clean = extractBillData(base, allCos, bill);
+      // 3. Normalize
+      const fullBill = normalizeBill(base, allCos, bill);
 
-      // Add WA info
-      extractWashington(clean);
+      // 4. WA Filter
+      const waBill = filterWashingtonOnly(fullBill);
 
-      output[clean.id] = clean;
-      console.log(`✓ Done: ${label} — WA cosponsors: ${clean.waCosponsorCount}`);
+      console.log(
+        `→ WA Sponsor: ${waBill.hasWaSponsor ? "YES" : "NO"}, ` +
+        `WA Cosponsors: ${waBill.waCosponsorCount}`
+      );
 
+      output[waBill.id] = waBill;
     } catch (err) {
-      console.log(`✗ Failed ${label}: ${err.message}`);
+      console.log(`✗ Failed to process ${chamber}. ${bill}: ${err.message}`);
     }
-
-    console.log("----------------------------------------\n");
   }
 
+  // Save file
   const outPath = path.resolve("bills.json");
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
-  console.log(`Saved → ${outPath}`);
+
+  console.log("\n✓ Done. Saved to bills.json");
 }
 
 run();
