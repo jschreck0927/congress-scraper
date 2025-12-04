@@ -1,16 +1,14 @@
+// scrape_bills.js
 import fetch from "node-fetch";
 import fs from "fs";
 import path from "path";
-
-// WA extraction helper (API-level)
 import { extractWashington } from "./congress_api/utils/extractWashington.js";
-
-// HTML fallback helper (real-time Congress.gov HTML scraper)
-import { fetchWaFromHtml } from "./congress_api/utils/fetchWaFromHtml.js";
 
 const apiKey = process.env.CONGRESS_API_KEY;
 
-// House bills
+// ---------------------------
+// Bill Lists
+// ---------------------------
 const houseBills = [
   "467","647","659","740","785","913","965","980","981","983",
   "1039","1228","1286","1344","1404","1423","1578","1646","1741",
@@ -20,28 +18,59 @@ const houseBills = [
   "3951","3983","4837"
 ];
 
-// Senate bills
 const senateBills = [
   "275","478","585","599","605","607","609","610","611","649",
   "778","784","793","800","827","879","892","1032","1245","1318",
   "1320","1441","1533","1543"
 ];
 
-// Combined list
 const bills = [...houseBills, ...senateBills];
 
-// Chamber detection
 function getChamber(billNumber) {
   return senateBills.includes(billNumber) ? "s" : "hr";
 }
 
-// Build Congress.gov API URL
-function buildUrl(billNumber) {
+// ---------------------------
+// API URL builder
+// ---------------------------
+function buildUrl(billNumber, offset = 0) {
   const chamber = getChamber(billNumber);
-  return `https://api.congress.gov/v3/bill/119/${chamber}/${billNumber}?api_key=${apiKey}`;
+  return `https://api.congress.gov/v3/bill/119/${chamber}/${billNumber}?api_key=${apiKey}&offset=${offset}`;
 }
 
-// Normalize sponsor structure
+// ---------------------------
+// Pagination for cosponsors
+// ---------------------------
+async function getAllCosponsors(billNumber) {
+  let offset = 0;
+  let all = [];
+  
+  while (true) {
+    const url = buildUrl(billNumber, offset);
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Cosponsor request failed (${response.status})`);
+    }
+
+    const data = await response.json();
+    const cos = data.bill?.cosponsors || [];
+
+    all.push(...cos);
+
+    // Check if we need another page
+    if (!data.pagination || cos.length === 0) break;
+    if (offset + cos.length >= data.pagination.count) break;
+
+    offset += cos.length;
+  }
+
+  return all;
+}
+
+// ---------------------------
+// Normalize sponsor/cosponsor
+// ---------------------------
 function normalizeSponsor(sponsor) {
   if (!sponsor) return null;
 
@@ -59,9 +88,7 @@ function normalizeSponsor(sponsor) {
   };
 }
 
-// Normalize cosponsor structure
 function normalizeCosponsors(list) {
-  if (!list) return [];
   return list.map(c => ({
     bioguideId: c.bioguideId,
     firstName: c.firstName,
@@ -77,8 +104,24 @@ function normalizeCosponsors(list) {
   }));
 }
 
-// Extract simplified bill object from API response
-function extractBillData(apiObj, billNumber) {
+// ---------------------------
+// Fetch bill (page 1 only)
+// ---------------------------
+async function getBillBase(billNumber) {
+  const url = buildUrl(billNumber);
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Request failed (${response.status})`);
+  }
+
+  return await response.json();
+}
+
+// ---------------------------
+// Build simplified bill
+// ---------------------------
+function extractBillData(apiObj, cosponsors, billNumber) {
   const chamber = getChamber(billNumber);
   const bill = apiObj.bill;
 
@@ -90,28 +133,17 @@ function extractBillData(apiObj, billNumber) {
     title: bill.title || "",
     latestAction: bill.latestAction?.text || "",
     actionDate: bill.latestAction?.actionDate || "",
-    sponsor: normalizeSponsor(bill.sponsors?.[0]),
-    cosponsors: normalizeCosponsors(bill.cosponsors)
+    sponsor: normalizeSponsor(bill.sponsors?.[0] || null),
+    cosponsors: normalizeCosponsors(cosponsors),
+    cosponsorCount: cosponsors.length
   };
 }
 
-// Fetch bill data from Congress API
-async function getBillData(billNumber) {
-  const url = buildUrl(billNumber);
-
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    throw new Error(`Request failed (${response.status})`);
-  }
-
-  const data = await response.json();
-  return data;
-}
-
-// Main scraper
+// ---------------------------
+// Main Runner
+// ---------------------------
 async function run() {
-  console.log("Starting Congress bill update...\n");
+  console.log("Starting Congress WA-filtered update...\n");
 
   const output = {};
 
@@ -120,40 +152,21 @@ async function run() {
     console.log(`Checking ${chamber}. ${bill}...`);
 
     try {
-      const apiData = await getBillData(bill);
-      const cleanBill = extractBillData(apiData, bill);
+      // Page 1
+      const baseData = await getBillBase(bill);
 
-      //
-      // STEP 1 — Extract WA data using API
-      //
-      extractWashington(cleanBill);
+      // All cosponsors (paginated)
+      const allCos = await getAllCosponsors(bill);
 
-      //
-      // STEP 2 — HTML fallback (if API shows ZERO WA engagement)
-      //
-      if (cleanBill.waCosponsorCount === 0) {
-        console.log(`→ API shows no WA cosponsors… checking Congress.gov HTML for ${cleanBill.label}`);
+      // Final cleaned bill
+      const clean = extractBillData(baseData, allCos, bill);
 
-        const htmlMatches = await fetchWaFromHtml(cleanBill.chamber, cleanBill.number);
+      // Washington-only filter
+      extractWashington(clean);
 
-        if (htmlMatches.length > 0) {
-          console.log(`→ HTML discovered WA cosponsors:`, htmlMatches);
+      output[clean.id] = clean;
 
-          cleanBill.waCosponsors = htmlMatches.map(name => ({
-            name,
-            source: "html"
-          }));
-
-          cleanBill.waCosponsorCount = htmlMatches.length;
-        }
-      }
-
-      //
-      // Store the fully processed bill
-      //
-      output[cleanBill.id] = cleanBill;
-
-      console.log(`✓ Success: ${cleanBill.label}`);
+      console.log(`✓ Success: ${clean.label} (WA cosponsors: ${clean.waCosponsorCount})`);
     } catch (err) {
       console.log(`✗ Failed: ${chamber}. ${bill} — ${err.message}`);
     }
@@ -161,14 +174,10 @@ async function run() {
     console.log("--------------------------------------\n");
   }
 
-  //
-  // Write output file
-  //
   const outPath = path.resolve("bills.json");
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
-  console.log("All bills processed.");
-  console.log(`Saved to: ${outPath}`);
+  console.log("Done. Saved to bills.json");
 }
 
 run();
