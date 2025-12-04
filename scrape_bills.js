@@ -2,8 +2,11 @@ import fetch from "node-fetch";
 import fs from "fs";
 import path from "path";
 
-// WA extraction helper
+// WA extraction helper (API-level)
 import { extractWashington } from "./congress_api/utils/extractWashington.js";
+
+// HTML fallback helper (real-time Congress.gov HTML scraper)
+import { fetchWaFromHtml } from "./congress_api/utils/fetchWaFromHtml.js";
 
 const apiKey = process.env.CONGRESS_API_KEY;
 
@@ -24,7 +27,7 @@ const senateBills = [
   "1320","1441","1533","1543"
 ];
 
-// Combined
+// Combined list
 const bills = [...houseBills, ...senateBills];
 
 // Chamber detection
@@ -38,7 +41,7 @@ function buildUrl(billNumber) {
   return `https://api.congress.gov/v3/bill/119/${chamber}/${billNumber}?api_key=${apiKey}`;
 }
 
-// Normalize bill sponsor
+// Normalize sponsor structure
 function normalizeSponsor(sponsor) {
   if (!sponsor) return null;
 
@@ -56,7 +59,7 @@ function normalizeSponsor(sponsor) {
   };
 }
 
-// Normalize cosponsors
+// Normalize cosponsor structure
 function normalizeCosponsors(list) {
   if (!list) return [];
   return list.map(c => ({
@@ -74,7 +77,7 @@ function normalizeCosponsors(list) {
   }));
 }
 
-// Pull simplified bill data
+// Extract simplified bill object from API response
 function extractBillData(apiObj, billNumber) {
   const chamber = getChamber(billNumber);
   const bill = apiObj.bill;
@@ -92,9 +95,10 @@ function extractBillData(apiObj, billNumber) {
   };
 }
 
-// Fetch bill data from Congress.gov
+// Fetch bill data from Congress API
 async function getBillData(billNumber) {
   const url = buildUrl(billNumber);
+
   const response = await fetch(url);
 
   if (!response.ok) {
@@ -105,7 +109,7 @@ async function getBillData(billNumber) {
   return data;
 }
 
-// Main scraper runner
+// Main scraper
 async function run() {
   console.log("Starting Congress bill update...\n");
 
@@ -119,10 +123,34 @@ async function run() {
       const apiData = await getBillData(bill);
       const cleanBill = extractBillData(apiData, bill);
 
-      // Apply WA-only logic
+      //
+      // STEP 1 — Extract WA data using API
+      //
       extractWashington(cleanBill);
 
-      // Store final bill
+      //
+      // STEP 2 — HTML fallback (if API shows ZERO WA engagement)
+      //
+      if (cleanBill.waCosponsorCount === 0) {
+        console.log(`→ API shows no WA cosponsors… checking Congress.gov HTML for ${cleanBill.label}`);
+
+        const htmlMatches = await fetchWaFromHtml(cleanBill.chamber, cleanBill.number);
+
+        if (htmlMatches.length > 0) {
+          console.log(`→ HTML discovered WA cosponsors:`, htmlMatches);
+
+          cleanBill.waCosponsors = htmlMatches.map(name => ({
+            name,
+            source: "html"
+          }));
+
+          cleanBill.waCosponsorCount = htmlMatches.length;
+        }
+      }
+
+      //
+      // Store the fully processed bill
+      //
       output[cleanBill.id] = cleanBill;
 
       console.log(`✓ Success: ${cleanBill.label}`);
@@ -133,7 +161,9 @@ async function run() {
     console.log("--------------------------------------\n");
   }
 
+  //
   // Write output file
+  //
   const outPath = path.resolve("bills.json");
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
