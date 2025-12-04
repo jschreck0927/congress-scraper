@@ -31,22 +31,22 @@ jobs:
           node scrape_bills.js
           node build_output.js
 
-     - name: Commit updated bill data
-  run: |
-    git config --local user.email "actions@github.com"
-    git config --local user.name "github-actions"
-    git add bills.json
-    git commit -m "Update bill data" || echo "No changes to commit"
-    git pull --rebase --autostash
-    git push --force-with-lease
+      - name: Commit updated bill data
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "github-actions"
 
+          # Add changed files
           git add bills.json
 
-          # If there are no changes, skip commit/push
+          # If nothing changed, stop
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
           git commit -m "Update bill data"
-          git push
+
+          # Fix push conflicts
+          git pull --rebase --autostash
+          git push --force-with-lease
