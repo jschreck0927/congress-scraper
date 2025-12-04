@@ -1503,9 +1503,9 @@
     "number": "983",
     "label": "H.R. 983",
     "title": "Montgomery GI Bill Selected Reserves Tuition Fairness Act of 2025",
-    "latestAction": "Message on Senate action sent to the House.",
-    "actionDate": "2025-11-20",
-    "step": "Introduced",
+    "latestAction": "Presented to President.",
+    "actionDate": "2025-12-03",
+    "step": "To President",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/983",
     "sponsor": {
       "bioguideId": "V000135",
@@ -1520,12 +1520,12 @@
     },
     "cosponsors": [],
     "cosponsorCount": 0,
-    "updatedDate": "2025-11-24T16:07:39Z",
+    "updatedDate": "2025-12-04T09:05:56Z",
     "stageDates": {
       "introduced": "2025-02-05",
       "passedHouse": "2025-04-07",
       "passedSenate": "2025-11-20",
-      "toPresident": null,
+      "toPresident": "2025-12-03",
       "becameLaw": null
     },
     "committeeActions": [
@@ -10190,7 +10190,7 @@
     "chamber": "s",
     "number": "1032",
     "label": "S. 1032",
-    "title": "Major Richard Star Act",
+    "title": "A bill to amend title 10, United States Code, to provide for concurrent receipt of veterans' disability compensation and retired pay for disability retirees with combat-related disabilities, and for other purposes.",
     "latestAction": "Read twice and referred to the Committee on Armed Services.",
     "actionDate": "2025-03-13",
     "step": "Introduced",
@@ -10434,7 +10434,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-03T14:28:06Z",
+    "updatedDate": "2025-12-04T11:56:28Z",
     "stageDates": {
       "introduced": "2025-03-13",
       "passedHouse": null,
