@@ -1,4 +1,14 @@
-"dependencies": {
-  "node-fetch": "^3.3.2",
-  "playwright": "^1.40.0"
+{
+  "name": "congress-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scrapes Congress.gov API and HTML fallback for WA delegation tracking",
+  "main": "scrape_bills.js",
+  "scripts": {
+    "start": "node scrape_bills.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "playwright": "^1.40.0"
+  }
 }
