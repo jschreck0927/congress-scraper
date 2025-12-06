@@ -1354,7 +1354,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-05-20T14:04:19Z",
+    "updatedDate": "2025-12-06T06:48:00Z",
     "stageDates": {
       "introduced": "2025-02-04",
       "passedHouse": "2025-02-10",
@@ -2507,7 +2507,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-11-18T09:05:32Z",
+    "updatedDate": "2025-12-06T06:34:04Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
@@ -4585,10 +4585,23 @@
         "sponsorshipDate": "2025-12-01",
         "state": "VA",
         "url": "https://api.congress.gov/v3/member/K000399?format=json"
+      },
+      {
+        "bioguideId": "H001103",
+        "district": 0,
+        "firstName": "Pablo",
+        "fullName": "Rescom. Hernández, Pablo Jose [D-PR-At Large]",
+        "isOriginalCosponsor": false,
+        "lastName": "Hernández",
+        "middleName": "Jose",
+        "party": "D",
+        "sponsorshipDate": "2025-12-05",
+        "state": "PR",
+        "url": "https://api.congress.gov/v3/member/H001103?format=json"
       }
     ],
-    "cosponsorCount": 8,
-    "updatedDate": "2025-12-05T22:07:47Z",
+    "cosponsorCount": 9,
+    "updatedDate": "2025-12-06T09:05:54Z",
     "stageDates": {
       "introduced": "2025-03-14",
       "passedHouse": null,
@@ -5132,7 +5145,7 @@
       }
     ],
     "cosponsorCount": 1,
-    "updatedDate": "2025-11-19T09:07:25Z",
+    "updatedDate": "2025-12-06T07:08:38Z",
     "stageDates": {
       "introduced": "2025-03-25",
       "passedHouse": "2025-09-15",
@@ -6704,7 +6717,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-03T09:06:36Z",
+    "updatedDate": "2025-12-06T09:05:59Z",
     "stageDates": {
       "introduced": "2025-05-01",
       "passedHouse": null,
