@@ -728,7 +728,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-05T22:02:28Z",
+    "updatedDate": "2025-12-12T09:07:54Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -5510,8 +5510,8 @@
     "number": "2623",
     "label": "H.R. 2623",
     "title": "Innovative Therapies Centers of Excellence Act of 2025",
-    "latestAction": "Referred to the House Committee on Veterans' Affairs.",
-    "actionDate": "2025-04-03",
+    "latestAction": "Referred to the Subcommittee on Health.",
+    "actionDate": "2025-05-08",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2623",
     "sponsor": {
@@ -5772,7 +5772,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-02T09:05:33Z",
+    "updatedDate": "2025-12-12T09:07:43Z",
     "stageDates": {
       "introduced": "2025-04-03",
       "passedHouse": null,
@@ -5781,6 +5781,10 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-05-08"
+      },
       {
         "text": "Referred to the House Committee on Veterans' Affairs.",
         "actionDate": "2025-04-03"
@@ -9384,9 +9388,9 @@
     "number": "610",
     "label": "S. 610",
     "title": "Ensuring VetSuccess On Campus Act of 2025",
-    "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 273.",
-    "actionDate": "2025-12-02",
-    "step": "Introduced",
+    "latestAction": "Passed Senate without amendment by Unanimous Consent.",
+    "actionDate": "2025-12-11",
+    "step": "Passed Senate",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/610",
     "sponsor": {
       "bioguideId": "B001277",
@@ -9412,11 +9416,11 @@
       }
     ],
     "cosponsorCount": 1,
-    "updatedDate": "2025-12-12T06:08:16Z",
+    "updatedDate": "2025-12-12T11:58:20Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
-      "passedSenate": null,
+      "passedSenate": "2025-12-11",
       "toPresident": null,
       "becameLaw": null
     },
@@ -10950,7 +10954,7 @@
     "number": "1320",
     "label": "S. 1320",
     "title": "Servicewomen and Veterans Menopause Research Act",
-    "latestAction": "Committee on Veterans' Affairs. Reported by Senator Moran with amendments. Without written report.",
+    "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 275.",
     "actionDate": "2025-12-02",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1320",
@@ -11069,7 +11073,7 @@
       }
     ],
     "cosponsorCount": 9,
-    "updatedDate": "2025-12-04T03:38:21Z",
+    "updatedDate": "2025-12-12T12:03:19Z",
     "stageDates": {
       "introduced": "2025-04-08",
       "passedHouse": null,
