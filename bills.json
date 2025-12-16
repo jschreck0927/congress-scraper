@@ -3416,7 +3416,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-02T09:05:59Z",
+    "updatedDate": "2025-12-16T09:05:41Z",
     "stageDates": {
       "introduced": "2025-03-05",
       "passedHouse": null,
@@ -6721,7 +6721,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-06T09:05:59Z",
+    "updatedDate": "2025-12-16T09:05:26Z",
     "stageDates": {
       "introduced": "2025-05-01",
       "passedHouse": null,
@@ -9388,9 +9388,9 @@
     "number": "610",
     "label": "S. 610",
     "title": "Ensuring VetSuccess On Campus Act of 2025",
-    "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S8696; text: CR S8696)",
-    "actionDate": "2025-12-11",
-    "step": "Passed Senate",
+    "latestAction": "Held at the desk.",
+    "actionDate": "2025-12-15",
+    "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/610",
     "sponsor": {
       "bioguideId": "B001277",
@@ -9416,7 +9416,7 @@
       }
     ],
     "cosponsorCount": 1,
-    "updatedDate": "2025-12-12T19:08:04Z",
+    "updatedDate": "2025-12-16T12:03:15Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
