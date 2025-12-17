@@ -1503,9 +1503,9 @@
     "number": "983",
     "label": "H.R. 983",
     "title": "Montgomery GI Bill Selected Reserves Tuition Fairness Act of 2025",
-    "latestAction": "Signed by President.",
+    "latestAction": "Became Public Law No: 119-55.",
     "actionDate": "2025-12-12",
-    "step": "To President",
+    "step": "Became Law",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/983",
     "sponsor": {
       "bioguideId": "V000135",
@@ -1520,13 +1520,13 @@
     },
     "cosponsors": [],
     "cosponsorCount": 0,
-    "updatedDate": "2025-12-15T16:38:53Z",
+    "updatedDate": "2025-12-16T20:04:18Z",
     "stageDates": {
-      "introduced": "2025-02-05",
+      "introduced": null,
       "passedHouse": "2025-04-07",
       "passedSenate": "2025-11-20",
       "toPresident": "2025-12-03",
-      "becameLaw": null
+      "becameLaw": "2025-12-12"
     },
     "committeeActions": [
       {
@@ -1544,10 +1544,6 @@
       {
         "text": "Referred to the Subcommittee on Economic Opportunity.",
         "actionDate": "2025-03-07"
-      },
-      {
-        "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-        "actionDate": "2025-02-05"
       },
       {
         "text": "Referred to the Committee on Veterans' Affairs, and in addition to the Committee on Armed Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
