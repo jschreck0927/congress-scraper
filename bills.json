@@ -2503,7 +2503,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-06T06:34:04Z",
+    "updatedDate": "2025-12-17T09:06:37Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
@@ -4020,7 +4020,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-05T21:42:11Z",
+    "updatedDate": "2025-12-17T09:06:20Z",
     "stageDates": {
       "introduced": "2025-03-11",
       "passedHouse": null,
@@ -4130,10 +4130,22 @@
         "sponsorshipDate": "2025-10-03",
         "state": "VA",
         "url": "https://api.congress.gov/v3/member/V000138?format=json"
+      },
+      {
+        "bioguideId": "N000191",
+        "district": 2,
+        "firstName": "Joe",
+        "fullName": "Rep. Neguse, Joe [D-CO-2]",
+        "isOriginalCosponsor": false,
+        "lastName": "Neguse",
+        "party": "D",
+        "sponsorshipDate": "2025-12-16",
+        "state": "CO",
+        "url": "https://api.congress.gov/v3/member/N000191?format=json"
       }
     ],
-    "cosponsorCount": 5,
-    "updatedDate": "2025-10-04T08:05:56Z",
+    "cosponsorCount": 6,
+    "updatedDate": "2025-12-17T09:06:17Z",
     "stageDates": {
       "introduced": "2025-03-11",
       "passedHouse": null,
@@ -6321,10 +6333,22 @@
         "sponsorshipDate": "2025-11-18",
         "state": "CO",
         "url": "https://api.congress.gov/v3/member/N000191?format=json"
+      },
+      {
+        "bioguideId": "M001237",
+        "district": 8,
+        "firstName": "Kristen",
+        "fullName": "Rep. McDonald Rivet, Kristen [D-MI-8]",
+        "isOriginalCosponsor": false,
+        "lastName": "McDonald Rivet",
+        "party": "D",
+        "sponsorshipDate": "2025-12-16",
+        "state": "MI",
+        "url": "https://api.congress.gov/v3/member/M001237?format=json"
       }
     ],
-    "cosponsorCount": 9,
-    "updatedDate": "2025-12-05T21:45:53Z",
+    "cosponsorCount": 10,
+    "updatedDate": "2025-12-17T09:06:31Z",
     "stageDates": {
       "introduced": "2025-04-10",
       "passedHouse": null,
