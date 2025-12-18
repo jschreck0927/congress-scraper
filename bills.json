@@ -6741,7 +6741,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-16T09:05:26Z",
+    "updatedDate": "2025-12-18T09:07:27Z",
     "stageDates": {
       "introduced": "2025-05-01",
       "passedHouse": null,
@@ -7610,10 +7610,22 @@
         "sponsorshipDate": "2025-12-01",
         "state": "CA",
         "url": "https://api.congress.gov/v3/member/W000830?format=json"
+      },
+      {
+        "bioguideId": "V000136",
+        "district": 2,
+        "firstName": "Gabe",
+        "fullName": "Rep. Vasquez, Gabe [D-NM-2]",
+        "isOriginalCosponsor": false,
+        "lastName": "Vasquez",
+        "party": "D",
+        "sponsorshipDate": "2025-12-17",
+        "state": "NM",
+        "url": "https://api.congress.gov/v3/member/V000136?format=json"
       }
     ],
-    "cosponsorCount": 13,
-    "updatedDate": "2025-12-02T09:05:55Z",
+    "cosponsorCount": 14,
+    "updatedDate": "2025-12-18T09:07:28Z",
     "stageDates": {
       "introduced": "2025-06-05",
       "passedHouse": null,
