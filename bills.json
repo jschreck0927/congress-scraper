@@ -3412,7 +3412,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-16T09:05:41Z",
+    "updatedDate": "2025-12-19T09:08:02Z",
     "stageDates": {
       "introduced": "2025-03-05",
       "passedHouse": null,
@@ -3722,7 +3722,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-05T09:06:23Z",
+    "updatedDate": "2025-12-19T09:08:03Z",
     "stageDates": {
       "introduced": "2025-03-03",
       "passedHouse": null,
@@ -9275,10 +9275,10 @@
     "chamber": "s",
     "number": "607",
     "label": "S. 607",
-    "title": "Improving Veteran Access to Care Act",
-    "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 272.",
-    "actionDate": "2025-12-02",
-    "step": "Introduced",
+    "title": "A bill to require the Secretary of Veterans Affairs to establish an integrated project team to improve the process for scheduling appointments for health care from the Department of Veterans Affairs, and for other purposes.",
+    "latestAction": "Passed Senate with an amendment and an amendment to the Title by Unanimous Consent.",
+    "actionDate": "2025-12-18",
+    "step": "Passed Senate",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/607",
     "sponsor": {
       "bioguideId": "H001076",
@@ -9326,11 +9326,11 @@
       }
     ],
     "cosponsorCount": 3,
-    "updatedDate": "2025-12-04T03:38:21Z",
+    "updatedDate": "2025-12-19T11:56:31Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
-      "passedSenate": null,
+      "passedSenate": "2025-12-18",
       "toPresident": null,
       "becameLaw": null
     },
