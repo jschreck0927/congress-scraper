@@ -2236,8 +2236,8 @@
     "number": "1404",
     "label": "H.R. 1404",
     "title": "CHAMPVA Children’s Care Protection Act of 2025",
-    "latestAction": "Referred to the House Committee on Veterans' Affairs.",
-    "actionDate": "2025-02-18",
+    "latestAction": "Referred to the Subcommittee on Health.",
+    "actionDate": "2025-12-19",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1404",
     "sponsor": {
@@ -2503,7 +2503,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-17T09:06:37Z",
+    "updatedDate": "2025-12-20T09:06:52Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
@@ -2512,6 +2512,10 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-12-19"
+      },
       {
         "text": "Referred to the House Committee on Veterans' Affairs.",
         "actionDate": "2025-02-18"
@@ -3412,7 +3416,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-19T09:08:02Z",
+    "updatedDate": "2025-12-20T09:06:46Z",
     "stageDates": {
       "introduced": "2025-03-05",
       "passedHouse": null,
@@ -8195,8 +8199,8 @@
     "number": "4837",
     "label": "H.R. 4837",
     "title": "Written Informed Consent Act",
-    "latestAction": "Referred to the House Committee on Veterans' Affairs.",
-    "actionDate": "2025-08-01",
+    "latestAction": "Referred to the Subcommittee on Health.",
+    "actionDate": "2025-12-19",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4837",
     "sponsor": {
@@ -8299,7 +8303,7 @@
       }
     ],
     "cosponsorCount": 7,
-    "updatedDate": "2025-11-21T12:04:36Z",
+    "updatedDate": "2025-12-20T09:06:50Z",
     "stageDates": {
       "introduced": "2025-08-01",
       "passedHouse": null,
@@ -8308,6 +8312,10 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Referred to the Subcommittee on Health.",
+        "actionDate": "2025-12-19"
+      },
       {
         "text": "Referred to the House Committee on Veterans' Affairs.",
         "actionDate": "2025-08-01"
@@ -9275,10 +9283,10 @@
     "chamber": "s",
     "number": "607",
     "label": "S. 607",
-    "title": "Improving Veteran Access to Care Act",
-    "latestAction": "Passed Senate with an amendment and an amendment to the Title by Unanimous Consent.",
-    "actionDate": "2025-12-18",
-    "step": "Passed Senate",
+    "title": "A bill to require the Secretary of Veterans Affairs to establish an integrated project team to improve the process for scheduling appointments for health care from the Department of Veterans Affairs, and for other purposes.",
+    "latestAction": "Held at the desk.",
+    "actionDate": "2025-12-19",
+    "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/607",
     "sponsor": {
       "bioguideId": "H001076",
@@ -9326,7 +9334,7 @@
       }
     ],
     "cosponsorCount": 3,
-    "updatedDate": "2025-12-19T12:23:21Z",
+    "updatedDate": "2025-12-20T11:56:17Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
