@@ -7322,10 +7322,22 @@
         "sponsorshipDate": "2025-12-01",
         "state": "CO",
         "url": "https://api.congress.gov/v3/member/N000191?format=json"
+      },
+      {
+        "bioguideId": "G000602",
+        "district": 4,
+        "firstName": "Laura",
+        "fullName": "Rep. Gillen, Laura [D-NY-4]",
+        "isOriginalCosponsor": false,
+        "lastName": "Gillen",
+        "party": "D",
+        "sponsorshipDate": "2025-12-23",
+        "state": "NY",
+        "url": "https://api.congress.gov/v3/member/G000602?format=json"
       }
     ],
-    "cosponsorCount": 5,
-    "updatedDate": "2025-12-02T09:05:48Z",
+    "cosponsorCount": 6,
+    "updatedDate": "2025-12-24T09:05:17Z",
     "stageDates": {
       "introduced": "2025-05-29",
       "passedHouse": null,
