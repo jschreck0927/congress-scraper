@@ -6439,42 +6439,13 @@
     "cosponsorCount": 2,
     "updatedDate": "2025-10-15T17:06:12Z",
     "stageDates": {
-      "introduced": "2025-04-30",
+      "introduced": null,
       "passedHouse": null,
       "passedSenate": null,
       "toPresident": null,
       "becameLaw": null
     },
-    "committeeActions": [
-      {
-        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-339.",
-        "actionDate": "2025-10-08"
-      },
-      {
-        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-339.",
-        "actionDate": "2025-10-08"
-      },
-      {
-        "text": "Committee Consideration and Mark-up Session Held",
-        "actionDate": "2025-07-23"
-      },
-      {
-        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
-        "actionDate": "2025-07-23"
-      },
-      {
-        "text": "Subcommittee Hearings Held",
-        "actionDate": "2025-06-24"
-      },
-      {
-        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
-        "actionDate": "2025-05-15"
-      },
-      {
-        "text": "Referred to the House Committee on Veterans' Affairs.",
-        "actionDate": "2025-04-30"
-      }
-    ],
+    "committeeActions": [],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
