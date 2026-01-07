@@ -3077,9 +3077,22 @@
       "state": "IL",
       "url": "https://api.congress.gov/v3/member/U000040?format=json"
     },
-    "cosponsors": [],
-    "cosponsorCount": 0,
-    "updatedDate": "2025-12-05T21:48:36Z",
+    "cosponsors": [
+      {
+        "bioguideId": "H001091",
+        "district": 2,
+        "firstName": "Ashley",
+        "fullName": "Rep. Hinson, Ashley [R-IA-2]",
+        "isOriginalCosponsor": false,
+        "lastName": "Hinson",
+        "party": "R",
+        "sponsorshipDate": "2026-01-06",
+        "state": "IA",
+        "url": "https://api.congress.gov/v3/member/H001091?format=json"
+      }
+    ],
+    "cosponsorCount": 1,
+    "updatedDate": "2026-01-07T09:05:45Z",
     "stageDates": {
       "introduced": "2025-02-27",
       "passedHouse": null,
@@ -3416,7 +3429,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-20T09:06:46Z",
+    "updatedDate": "2026-01-07T09:05:51Z",
     "stageDates": {
       "introduced": "2025-03-05",
       "passedHouse": null,
@@ -4024,7 +4037,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-17T09:06:20Z",
+    "updatedDate": "2026-01-07T09:05:48Z",
     "stageDates": {
       "introduced": "2025-03-11",
       "passedHouse": null,
@@ -5784,7 +5797,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-12T09:07:43Z",
+    "updatedDate": "2026-01-07T09:05:48Z",
     "stageDates": {
       "introduced": "2025-04-03",
       "passedHouse": null,
