@@ -10220,8 +10220,42 @@
       "state": "HI",
       "url": "https://api.congress.gov/v3/member/H001042?format=json"
     },
-    "cosponsors": [],
-    "cosponsorCount": 0,
+    "cosponsors": [
+      {
+        "bioguideId": "B001236",
+        "firstName": "John",
+        "fullName": "Sen. Boozman, John [R-AR]",
+        "isOriginalCosponsor": true,
+        "lastName": "Boozman",
+        "party": "R",
+        "sponsorshipDate": "2025-03-06",
+        "state": "AR",
+        "url": "https://api.congress.gov/v3/member/B001236?format=json"
+      },
+      {
+        "bioguideId": "G000574",
+        "firstName": "Ruben",
+        "fullName": "Sen. Gallego, Ruben [D-AZ]",
+        "isOriginalCosponsor": true,
+        "lastName": "Gallego",
+        "party": "D",
+        "sponsorshipDate": "2025-03-06",
+        "state": "AZ",
+        "url": "https://api.congress.gov/v3/member/G000574?format=json"
+      },
+      {
+        "bioguideId": "T000278",
+        "firstName": "Tommy",
+        "fullName": "Sen. Tuberville, Tommy [R-AL]",
+        "isOriginalCosponsor": true,
+        "lastName": "Tuberville",
+        "party": "R",
+        "sponsorshipDate": "2025-03-06",
+        "state": "AL",
+        "url": "https://api.congress.gov/v3/member/T000278?format=json"
+      }
+    ],
+    "cosponsorCount": 3,
     "updatedDate": "2025-05-21T19:38:52Z",
     "stageDates": {
       "introduced": "2025-03-06",
