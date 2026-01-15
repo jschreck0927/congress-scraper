@@ -728,7 +728,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-01-08T09:06:42Z",
+    "updatedDate": "2026-01-15T06:52:54Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -8520,7 +8520,7 @@
       }
     ],
     "cosponsorCount": 12,
-    "updatedDate": "2025-12-31T16:33:37Z",
+    "updatedDate": "2026-01-15T06:54:07Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -9411,7 +9411,7 @@
     "chamber": "s",
     "number": "609",
     "label": "S. 609",
-    "title": "BRAVE Act of 2025",
+    "title": "A bill to improve mental health services of the Department of Veterans Affairs, and for other purposes.",
     "latestAction": "Read twice and referred to the Committee on Veterans' Affairs.",
     "actionDate": "2025-02-18",
     "step": "Introduced",
@@ -9437,10 +9437,22 @@
         "sponsorshipDate": "2025-10-08",
         "state": "NH",
         "url": "https://api.congress.gov/v3/member/S001181?format=json"
+      },
+      {
+        "bioguideId": "K000383",
+        "firstName": "Angus",
+        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
+        "isOriginalCosponsor": false,
+        "lastName": "King",
+        "middleName": "S.",
+        "party": "I",
+        "sponsorshipDate": "2026-01-14",
+        "state": "ME",
+        "url": "https://api.congress.gov/v3/member/K000383?format=json"
       }
     ],
-    "cosponsorCount": 1,
-    "updatedDate": "2026-01-06T16:45:08Z",
+    "cosponsorCount": 2,
+    "updatedDate": "2026-01-15T11:56:28Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
@@ -10692,10 +10704,22 @@
         "sponsorshipDate": "2025-10-27",
         "state": "GA",
         "url": "https://api.congress.gov/v3/member/O000174?format=json"
+      },
+      {
+        "bioguideId": "K000383",
+        "firstName": "Angus",
+        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
+        "isOriginalCosponsor": false,
+        "lastName": "King",
+        "middleName": "S.",
+        "party": "I",
+        "sponsorshipDate": "2026-01-14",
+        "state": "ME",
+        "url": "https://api.congress.gov/v3/member/K000383?format=json"
       }
     ],
-    "cosponsorCount": 11,
-    "updatedDate": "2026-01-13T01:30:16Z",
+    "cosponsorCount": 12,
+    "updatedDate": "2026-01-15T12:03:40Z",
     "stageDates": {
       "introduced": "2025-04-01",
       "passedHouse": null,
@@ -11147,10 +11171,22 @@
         "sponsorshipDate": "2025-12-01",
         "state": "KS",
         "url": "https://api.congress.gov/v3/member/M000934?format=json"
+      },
+      {
+        "bioguideId": "K000383",
+        "firstName": "Angus",
+        "fullName": "Sen. King, Angus S., Jr. [I-ME]",
+        "isOriginalCosponsor": false,
+        "lastName": "King",
+        "middleName": "S.",
+        "party": "I",
+        "sponsorshipDate": "2026-01-14",
+        "state": "ME",
+        "url": "https://api.congress.gov/v3/member/K000383?format=json"
       }
     ],
-    "cosponsorCount": 9,
-    "updatedDate": "2025-12-12T12:03:19Z",
+    "cosponsorCount": 10,
+    "updatedDate": "2026-01-15T12:03:40Z",
     "stageDates": {
       "introduced": "2025-04-08",
       "passedHouse": null,
