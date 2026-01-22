@@ -413,7 +413,7 @@
       }
     ],
     "cosponsorCount": 4,
-    "updatedDate": "2026-01-22T03:38:19Z",
+    "updatedDate": "2026-01-22T09:05:20Z",
     "stageDates": {
       "introduced": "2025-01-23",
       "passedHouse": "2026-01-20",
@@ -2822,7 +2822,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-01-16T19:26:20Z",
+    "updatedDate": "2026-01-22T09:06:01Z",
     "stageDates": {
       "introduced": "2025-02-18",
       "passedHouse": null,
@@ -6226,8 +6226,8 @@
     "number": "2878",
     "label": "H.R. 2878",
     "title": "Daniel J. Harvey, Jr. and Adam Lambert Improving Servicemember Transition to Reduce Veteran Suicide Act",
-    "latestAction": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
-    "actionDate": "2025-04-10",
+    "latestAction": "Subcommittee Hearings Held",
+    "actionDate": "2026-01-21",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2878",
     "sponsor": {
@@ -6377,7 +6377,7 @@
       }
     ],
     "cosponsorCount": 11,
-    "updatedDate": "2026-01-10T09:06:15Z",
+    "updatedDate": "2026-01-22T09:06:13Z",
     "stageDates": {
       "introduced": "2025-04-10",
       "passedHouse": null,
@@ -6386,6 +6386,14 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Subcommittee Hearings Held",
+        "actionDate": "2026-01-21"
+      },
+      {
+        "text": "Referred to the Subcommittee on Economic Opportunity.",
+        "actionDate": "2026-01-21"
+      },
       {
         "text": "Referred to the Committee on Armed Services, and in addition to the Committee on Veterans' Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
         "actionDate": "2025-04-10"
