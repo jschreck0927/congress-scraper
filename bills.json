@@ -345,8 +345,8 @@
     "number": "659",
     "label": "H.R. 659",
     "title": "Veterans Law Judge Experience Act of 2025",
-    "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-    "actionDate": "2026-01-20",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+    "actionDate": "2026-01-26",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/659",
     "sponsor": {
@@ -413,7 +413,7 @@
       }
     ],
     "cosponsorCount": 4,
-    "updatedDate": "2026-01-22T09:05:20Z",
+    "updatedDate": "2026-01-27T11:56:17Z",
     "stageDates": {
       "introduced": "2025-01-23",
       "passedHouse": "2026-01-20",
@@ -422,6 +422,10 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2026-01-26"
+      },
       {
         "text": "Reported by the Committee on Veterans' Affairs. H. Rept. 119-309.",
         "actionDate": "2025-09-26"
