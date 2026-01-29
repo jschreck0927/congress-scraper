@@ -10728,10 +10728,21 @@
         "sponsorshipDate": "2026-01-14",
         "state": "ME",
         "url": "https://api.congress.gov/v3/member/K000383?format=json"
+      },
+      {
+        "bioguideId": "B001288",
+        "firstName": "Cory",
+        "fullName": "Sen. Booker, Cory A. [D-NJ]",
+        "isOriginalCosponsor": false,
+        "lastName": "Booker",
+        "party": "D",
+        "sponsorshipDate": "2026-01-28",
+        "state": "NJ",
+        "url": "https://api.congress.gov/v3/member/B001288?format=json"
       }
     ],
-    "cosponsorCount": 12,
-    "updatedDate": "2026-01-15T12:03:40Z",
+    "cosponsorCount": 13,
+    "updatedDate": "2026-01-29T12:03:17Z",
     "stageDates": {
       "introduced": "2025-04-01",
       "passedHouse": null,
