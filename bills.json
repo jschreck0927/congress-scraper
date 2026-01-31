@@ -1358,7 +1358,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-01-30T17:41:12Z",
+    "updatedDate": "2026-01-31T00:56:12Z",
     "stageDates": {
       "introduced": "2025-02-04",
       "passedHouse": "2025-02-10",
@@ -6112,42 +6112,13 @@
     "cosponsorCount": 20,
     "updatedDate": "2025-12-11T04:08:20Z",
     "stageDates": {
-      "introduced": "2025-04-07",
-      "passedHouse": "2025-09-15",
+      "introduced": null,
+      "passedHouse": null,
       "passedSenate": null,
       "toPresident": null,
       "becameLaw": null
     },
-    "committeeActions": [
-      {
-        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-258.",
-        "actionDate": "2025-09-09"
-      },
-      {
-        "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-258.",
-        "actionDate": "2025-09-09"
-      },
-      {
-        "text": "Committee Consideration and Mark-up Session Held",
-        "actionDate": "2025-07-23"
-      },
-      {
-        "text": "Subcommittee on Disability Assistance and Memorial Affairs Discharged",
-        "actionDate": "2025-07-03"
-      },
-      {
-        "text": "Subcommittee Hearings Held",
-        "actionDate": "2025-06-24"
-      },
-      {
-        "text": "Referred to the Subcommittee on Disability Assistance and Memorial Affairs.",
-        "actionDate": "2025-04-21"
-      },
-      {
-        "text": "Referred to the House Committee on Veterans' Affairs.",
-        "actionDate": "2025-04-07"
-      }
-    ],
+    "committeeActions": [],
     "hasWaSponsor": false,
     "waSponsor": null,
     "waCosponsors": [],
