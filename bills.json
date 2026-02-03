@@ -732,7 +732,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-01-15T06:52:54Z",
+    "updatedDate": "2026-02-03T09:05:49Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -1387,8 +1387,8 @@
     "number": "980",
     "label": "H.R. 980",
     "title": "Veterans Readiness and Employment Improvement Act of 2025",
-    "latestAction": "Placed on the Union Calendar, Calendar No. 186.",
-    "actionDate": "2025-08-15",
+    "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
+    "actionDate": "2026-02-02",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/980",
     "sponsor": {
@@ -1404,10 +1404,10 @@
     },
     "cosponsors": [],
     "cosponsorCount": 0,
-    "updatedDate": "2025-08-23T17:26:13Z",
+    "updatedDate": "2026-02-03T09:05:54Z",
     "stageDates": {
       "introduced": "2025-02-05",
-      "passedHouse": null,
+      "passedHouse": "2026-02-02",
       "passedSenate": null,
       "toPresident": null,
       "becameLaw": null
@@ -4467,7 +4467,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-05T21:47:53Z",
+    "updatedDate": "2026-02-03T09:05:33Z",
     "stageDates": {
       "introduced": "2025-03-14",
       "passedHouse": null,
@@ -6431,8 +6431,8 @@
     "number": "3123",
     "label": "H.R. 3123",
     "title": "Ernest Peltz Accrued Veterans Benefits Act",
-    "latestAction": "Placed on the Union Calendar, Calendar No. 291.",
-    "actionDate": "2025-10-08",
+    "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
+    "actionDate": "2026-02-02",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3123",
     "sponsor": {
@@ -6474,10 +6474,10 @@
       }
     ],
     "cosponsorCount": 2,
-    "updatedDate": "2026-01-15T14:41:49Z",
+    "updatedDate": "2026-02-03T09:05:25Z",
     "stageDates": {
       "introduced": "2025-04-30",
-      "passedHouse": null,
+      "passedHouse": "2026-02-02",
       "passedSenate": null,
       "toPresident": null,
       "becameLaw": null
@@ -8037,10 +8037,22 @@
         "sponsorshipDate": "2025-10-31",
         "state": "CO",
         "url": "https://api.congress.gov/v3/member/N000191?format=json"
+      },
+      {
+        "bioguideId": "G000602",
+        "district": 4,
+        "firstName": "Laura",
+        "fullName": "Rep. Gillen, Laura [D-NY-4]",
+        "isOriginalCosponsor": false,
+        "lastName": "Gillen",
+        "party": "D",
+        "sponsorshipDate": "2026-02-02",
+        "state": "NY",
+        "url": "https://api.congress.gov/v3/member/G000602?format=json"
       }
     ],
-    "cosponsorCount": 12,
-    "updatedDate": "2025-12-05T22:51:22Z",
+    "cosponsorCount": 13,
+    "updatedDate": "2026-02-03T09:05:26Z",
     "stageDates": {
       "introduced": "2025-06-09",
       "passedHouse": null,
