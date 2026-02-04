@@ -1387,8 +1387,8 @@
     "number": "980",
     "label": "H.R. 980",
     "title": "Veterans Readiness and Employment Improvement Act of 2025",
-    "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-    "actionDate": "2026-02-02",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+    "actionDate": "2026-02-03",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/980",
     "sponsor": {
@@ -1404,7 +1404,7 @@
     },
     "cosponsors": [],
     "cosponsorCount": 0,
-    "updatedDate": "2026-02-04T04:11:39Z",
+    "updatedDate": "2026-02-04T11:56:22Z",
     "stageDates": {
       "introduced": "2025-02-05",
       "passedHouse": "2026-02-02",
@@ -1413,6 +1413,10 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2026-02-03"
+      },
       {
         "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-228.",
         "actionDate": "2025-08-15"
@@ -6431,8 +6435,8 @@
     "number": "3123",
     "label": "H.R. 3123",
     "title": "Ernest Peltz Accrued Veterans Benefits Act",
-    "latestAction": "Motion to reconsider laid on the table Agreed to without objection.",
-    "actionDate": "2026-02-02",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+    "actionDate": "2026-02-03",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3123",
     "sponsor": {
@@ -6474,7 +6478,7 @@
       }
     ],
     "cosponsorCount": 2,
-    "updatedDate": "2026-02-04T05:06:22Z",
+    "updatedDate": "2026-02-04T11:56:21Z",
     "stageDates": {
       "introduced": "2025-04-30",
       "passedHouse": "2026-02-02",
@@ -6483,6 +6487,10 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Received in the Senate and Read twice and referred to the Committee on Veterans' Affairs.",
+        "actionDate": "2026-02-03"
+      },
       {
         "text": "Reported (Amended) by the Committee on Veterans' Affairs. H. Rept. 119-339.",
         "actionDate": "2025-10-08"
