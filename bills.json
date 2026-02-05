@@ -732,7 +732,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-02-03T09:05:49Z",
+    "updatedDate": "2026-02-05T09:06:53Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -974,10 +974,22 @@
         "sponsorshipDate": "2025-07-21",
         "state": "NV",
         "url": "https://api.congress.gov/v3/member/L000590?format=json"
+      },
+      {
+        "bioguideId": "O000086",
+        "district": 4,
+        "firstName": "Burgess",
+        "fullName": "Rep. Owens, Burgess [R-UT-4]",
+        "isOriginalCosponsor": false,
+        "lastName": "Owens",
+        "party": "R",
+        "sponsorshipDate": "2026-02-04",
+        "state": "UT",
+        "url": "https://api.congress.gov/v3/member/O000086?format=json"
       }
     ],
-    "cosponsorCount": 16,
-    "updatedDate": "2026-02-04T04:26:33Z",
+    "cosponsorCount": 17,
+    "updatedDate": "2026-02-05T09:06:56Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -3747,7 +3759,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-01-13T09:05:16Z",
+    "updatedDate": "2026-02-05T09:06:37Z",
     "stageDates": {
       "introduced": "2025-03-03",
       "passedHouse": null,
@@ -4471,7 +4483,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-02-03T09:05:33Z",
+    "updatedDate": "2026-02-05T09:06:05Z",
     "stageDates": {
       "introduced": "2025-03-14",
       "passedHouse": null,
