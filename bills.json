@@ -761,8 +761,8 @@
     "number": "785",
     "label": "H.R. 785",
     "title": "Representing our Seniors at VA Act of 2025",
-    "latestAction": "Subcommittee Hearings Held",
-    "actionDate": "2025-06-12",
+    "latestAction": "Ordered to be Reported in the Nature of a Substitute (Amended) by Voice Vote.",
+    "actionDate": "2026-02-12",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/785",
     "sponsor": {
@@ -1002,7 +1002,7 @@
       }
     ],
     "cosponsorCount": 18,
-    "updatedDate": "2026-02-10T09:05:50Z",
+    "updatedDate": "2026-02-13T09:06:48Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -1011,6 +1011,14 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2026-02-12"
+      },
+      {
+        "text": "Subcommittee on Health Discharged",
+        "actionDate": "2026-02-05"
+      },
       {
         "text": "Subcommittee Hearings Held",
         "actionDate": "2025-06-12"
@@ -4886,8 +4894,8 @@
     "number": "2148",
     "label": "H.R. 2148",
     "title": "Veteran Caregiver Reeducation, Reemployment, and Retirement Act",
-    "latestAction": "Subcommittee Hearings Held",
-    "actionDate": "2025-06-12",
+    "latestAction": "Ordered to be Reported in the Nature of a Substitute (Amended) by Voice Vote.",
+    "actionDate": "2026-02-12",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2148",
     "sponsor": {
@@ -5001,7 +5009,7 @@
       }
     ],
     "cosponsorCount": 8,
-    "updatedDate": "2026-02-04T04:26:33Z",
+    "updatedDate": "2026-02-13T09:07:16Z",
     "stageDates": {
       "introduced": "2025-03-14",
       "passedHouse": null,
@@ -5010,6 +5018,14 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2026-02-12"
+      },
+      {
+        "text": "Subcommittee on Health Discharged",
+        "actionDate": "2026-02-05"
+      },
       {
         "text": "Subcommittee Hearings Held",
         "actionDate": "2025-06-12"
@@ -7440,8 +7456,8 @@
     "number": "3726",
     "label": "H.R. 3726",
     "title": "Fisher House Availability Act of 2025",
-    "latestAction": "Referred to the Subcommittee on Health.",
-    "actionDate": "2025-06-17",
+    "latestAction": "Ordered to be Reported in the Nature of a Substitute (Amended) by Voice Vote.",
+    "actionDate": "2026-02-12",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3726",
     "sponsor": {
@@ -7495,7 +7511,7 @@
       }
     ],
     "cosponsorCount": 3,
-    "updatedDate": "2025-11-19T09:07:18Z",
+    "updatedDate": "2026-02-13T09:06:59Z",
     "stageDates": {
       "introduced": "2025-06-04",
       "passedHouse": null,
@@ -7504,6 +7520,14 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Committee Consideration and Mark-up Session Held",
+        "actionDate": "2026-02-12"
+      },
+      {
+        "text": "Subcommittee on Health Discharged",
+        "actionDate": "2026-02-05"
+      },
       {
         "text": "Referred to the Subcommittee on Health.",
         "actionDate": "2025-06-17"
