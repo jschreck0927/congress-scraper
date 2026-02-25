@@ -732,7 +732,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-02-05T09:06:53Z",
+    "updatedDate": "2026-02-25T09:06:21Z",
     "stageDates": {
       "introduced": "2025-01-28",
       "passedHouse": null,
@@ -3516,8 +3516,8 @@
     "number": "1965",
     "label": "H.R. 1965",
     "title": "Veteran Education Assistance Adjustment Act",
-    "latestAction": "Subcommittee Hearings Held",
-    "actionDate": "2025-06-11",
+    "latestAction": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+    "actionDate": "2026-02-24",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1965",
     "sponsor": {
@@ -3780,7 +3780,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2026-02-05T09:06:37Z",
+    "updatedDate": "2026-02-25T09:06:15Z",
     "stageDates": {
       "introduced": "2025-03-03",
       "passedHouse": null,
@@ -3789,6 +3789,14 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+        "actionDate": "2026-02-24"
+      },
+      {
+        "text": "Subcommittee Consideration and Mark-up Session Held",
+        "actionDate": "2026-02-24"
+      },
       {
         "text": "Subcommittee Hearings Held",
         "actionDate": "2025-06-11"
@@ -8874,7 +8882,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-12-05T21:42:09Z",
+    "updatedDate": "2026-02-25T12:03:22Z",
     "stageDates": {
       "introduced": "2025-02-06",
       "passedHouse": null,
@@ -11328,8 +11336,8 @@
     "number": "1441",
     "label": "S. 1441",
     "title": "SAVES Act of 2025",
-    "latestAction": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
-    "actionDate": "2025-07-30",
+    "latestAction": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 342.",
+    "actionDate": "2026-02-24",
     "step": "Introduced",
     "legislationUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1441",
     "sponsor": {
@@ -11573,7 +11581,7 @@
       }
     ],
     "cosponsorCount": 20,
-    "updatedDate": "2025-10-04T11:03:13Z",
+    "updatedDate": "2026-02-25T12:03:22Z",
     "stageDates": {
       "introduced": "2025-04-10",
       "passedHouse": null,
@@ -11582,6 +11590,14 @@
       "becameLaw": null
     },
     "committeeActions": [
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with an amendment in the nature of a substitute. With written report No. 119-113.",
+        "actionDate": "2026-02-24"
+      },
+      {
+        "text": "Committee on Veterans' Affairs. Reported by Senator Moran with an amendment in the nature of a substitute. With written report No. 119-113.",
+        "actionDate": "2026-02-24"
+      },
       {
         "text": "Committee on Veterans' Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
         "actionDate": "2025-07-30"
