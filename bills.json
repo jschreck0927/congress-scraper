@@ -1071,22 +1071,8 @@
       "state": "CA",
       "url": "https://api.congress.gov/v3/member/O000019?format=json"
     },
-    "cosponsors": [
-      {
-        "bioguideId": "T000487",
-        "district": 2,
-        "firstName": "Jill",
-        "fullName": "Rep. Tokuda, Jill N. [D-HI-2]",
-        "isOriginalCosponsor": false,
-        "lastName": "Tokuda",
-        "middleName": "N.",
-        "party": "D",
-        "sponsorshipDate": "2025-07-23",
-        "state": "HI",
-        "url": "https://api.congress.gov/v3/member/T000487?format=json"
-      }
-    ],
-    "cosponsorCount": 1,
+    "cosponsors": [],
+    "cosponsorCount": 0,
     "updatedDate": "2026-02-04T04:11:39Z",
     "stageDates": {
       "introduced": "2025-02-04",
@@ -9785,53 +9771,8 @@
       "state": "KS",
       "url": "https://api.congress.gov/v3/member/M000934?format=json"
     },
-    "cosponsors": [
-      {
-        "bioguideId": "B001277",
-        "firstName": "Richard",
-        "fullName": "Sen. Blumenthal, Richard [D-CT]",
-        "isOriginalCosponsor": true,
-        "lastName": "Blumenthal",
-        "party": "D",
-        "sponsorshipDate": "2025-02-20",
-        "state": "CT",
-        "url": "https://api.congress.gov/v3/member/B001277?format=json"
-      },
-      {
-        "bioguideId": "B001230",
-        "firstName": "Tammy",
-        "fullName": "Sen. Baldwin, Tammy [D-WI]",
-        "isOriginalCosponsor": false,
-        "lastName": "Baldwin",
-        "party": "D",
-        "sponsorshipDate": "2025-03-24",
-        "state": "WI",
-        "url": "https://api.congress.gov/v3/member/B001230?format=json"
-      },
-      {
-        "bioguideId": "B001288",
-        "firstName": "Cory",
-        "fullName": "Sen. Booker, Cory A. [D-NJ]",
-        "isOriginalCosponsor": false,
-        "lastName": "Booker",
-        "party": "D",
-        "sponsorshipDate": "2025-04-30",
-        "state": "NJ",
-        "url": "https://api.congress.gov/v3/member/B001288?format=json"
-      },
-      {
-        "bioguideId": "A000382",
-        "firstName": "Angela",
-        "fullName": "Sen. Alsobrooks, Angela D. [D-MD]",
-        "isOriginalCosponsor": false,
-        "lastName": "Alsobrooks",
-        "party": "D",
-        "sponsorshipDate": "2025-12-02",
-        "state": "MD",
-        "url": "https://api.congress.gov/v3/member/A000382?format=json"
-      }
-    ],
-    "cosponsorCount": 4,
+    "cosponsors": [],
+    "cosponsorCount": 0,
     "updatedDate": "2025-12-05T22:01:51Z",
     "stageDates": {
       "introduced": "2025-02-20",
