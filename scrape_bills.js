@@ -26,8 +26,13 @@ const bills = [...houseBills, ...senateBills];
 // ---------------------------
 // CONFIG
 // ---------------------------
-const WA_STATE = "WA"; // Keep only Washington
+const CONGRESS = "119";
+const WA_STATE = "WA";
 const apiKey = process.env.CONGRESS_API_KEY;
+
+if (!apiKey) {
+  throw new Error("Missing CONGRESS_API_KEY environment variable.");
+}
 
 // ---------------------------
 // HELPERS
@@ -36,70 +41,126 @@ function getChamber(billNumber) {
   return senateBills.includes(billNumber) ? "s" : "hr";
 }
 
-function buildUrl(billNumber, offset = 0) {
+function buildBillUrl(billNumber) {
   const chamber = getChamber(billNumber);
-  return `https://api.congress.gov/v3/bill/119/${chamber}/${billNumber}?api_key=${apiKey}&offset=${offset}`;
+  return `https://api.congress.gov/v3/bill/${CONGRESS}/${chamber}/${billNumber}?api_key=${apiKey}`;
 }
 
-// ---------------------------
-// FIXED PAGINATION — ALWAYS GET ALL COSPONSORS
-// ---------------------------
-async function getAllCosponsors(billNumber) {
-  let offset = 0;
-  let all = [];
+function buildCosponsorsUrl(billNumber, offset = 0, limit = 250) {
+  const chamber = getChamber(billNumber);
+  return `https://api.congress.gov/v3/bill/${CONGRESS}/${chamber}/${billNumber}/cosponsors?api_key=${apiKey}&limit=${limit}&offset=${offset}`;
+}
 
-  while (true) {
-    const url = buildUrl(billNumber, offset);
-    const response = await fetch(url);
+async function fetchJson(url) {
+  const response = await fetch(url);
 
-    if (!response.ok) {
-      throw new Error(`Cosponsor request failed (${response.status})`);
-    }
-
-    const data = await response.json();
-    const cos = data.bill?.cosponsors || [];
-
-    all.push(...cos);
-
-    // Congress.gov uses `next` pagination links
-    if (!data.pagination?.next) break;
-
-    offset += 250; // next page
+  if (!response.ok) {
+    throw new Error(`Request failed (${response.status}) for ${url}`);
   }
 
-  return all;
+  return await response.json();
 }
 
-// ---------------------------
-// FILTER TO WASHINGTON ONLY
-// ---------------------------
-function filterWashingtonOnly(data) {
-  const waSponsor =
-    data.sponsor && data.sponsor.state === WA_STATE ? data.sponsor : null;
-
-  const waCosponsors = data.cosponsors.filter(c => c.state === WA_STATE);
-
+function normalizeMember(member = {}) {
   return {
-    ...data,
-    hasWaSponsor: waSponsor !== null,
-    waSponsor,
-    waCosponsors,
-    waCosponsorCount: waCosponsors.length,
+    bioguideId: member.bioguideId || member.bioguide_id || null,
+    firstName: member.firstName || "",
+    middleName: member.middleName || "",
+    lastName: member.lastName || "",
+    fullName:
+      member.fullName ||
+      [member.firstName, member.middleName, member.lastName]
+        .filter(Boolean)
+        .join(" ")
+        .trim(),
+    party: member.party || "",
+    state: member.state || member.stateCode || "",
+    district: member.district ?? null,
+    sponsorshipDate: member.sponsorshipDate || member.sponsoredDate || null,
+    isOriginalCosponsor:
+      typeof member.isOriginalCosponsor === "boolean"
+        ? member.isOriginalCosponsor
+        : false,
+    url: member.url || ""
   };
+}
+
+function uniqueMembers(members = []) {
+  const seen = new Set();
+  const output = [];
+
+  for (const raw of members) {
+    const member = normalizeMember(raw);
+    const key =
+      member.bioguideId ||
+      `${member.fullName}|${member.party}|${member.state}|${member.district}`;
+
+    if (seen.has(key)) continue;
+    seen.add(key);
+    output.push(member);
+  }
+
+  return output;
+}
+
+function sortMembers(members = []) {
+  return [...members].sort((a, b) => {
+    const last = a.lastName.localeCompare(b.lastName);
+    if (last !== 0) return last;
+
+    const first = a.firstName.localeCompare(b.firstName);
+    if (first !== 0) return first;
+
+    return String(a.district ?? "").localeCompare(String(b.district ?? ""));
+  });
+}
+
+function isWA(member) {
+  return String(member?.state || "").toUpperCase() === WA_STATE;
+}
+
+function normalizeCommitteeReports(reports) {
+  if (!Array.isArray(reports)) return [];
+  return reports;
 }
 
 // ---------------------------
 // FETCH BASE BILL DATA
 // ---------------------------
 async function fetchBaseBill(billNumber) {
-  const url = buildUrl(billNumber);
-  const response = await fetch(url);
+  return await fetchJson(buildBillUrl(billNumber));
+}
 
-  if (!response.ok) {
-    throw new Error(`Base bill request failed (${response.status})`);
+// ---------------------------
+// GET ALL COSPONSORS
+// ---------------------------
+async function getAllCosponsors(billNumber) {
+  let offset = 0;
+  let all = [];
+
+  while (true) {
+    const data = await fetchJson(buildCosponsorsUrl(billNumber, offset, 250));
+
+    // Congress API list payloads typically return a top-level collection plus pagination.
+    const pageItems =
+      data.cosponsors ||
+      data.bill?.cosponsors ||
+      [];
+
+    if (!Array.isArray(pageItems) || pageItems.length === 0) {
+      break;
+    }
+
+    all.push(...pageItems);
+
+    if (!data.pagination?.next) {
+      break;
+    }
+
+    offset += 250;
   }
 
-  return await response.json();
+  return sortMembers(uniqueMembers(all));
 }
 
 // ---------------------------
@@ -109,21 +170,23 @@ function normalizeBill(raw, cosponsors, billNumber) {
   const bill = raw.bill;
   const chamber = getChamber(billNumber);
 
+  const sponsor = bill.sponsors?.[0] ? normalizeMember(bill.sponsors[0]) : null;
+  const normalizedCosponsors = sortMembers(uniqueMembers(cosponsors));
+
   return {
     id: `${chamber}${billNumber}`,
     chamber,
     number: billNumber,
-    label: `${chamber.toUpperCase()}. ${billNumber}`,
+    label: chamber === "hr" ? `H.R. ${billNumber}` : `S. ${billNumber}`,
     title: bill.title || "",
     latestAction: bill.latestAction?.text || "",
     actionDate: bill.latestAction?.actionDate || "",
     step: bill.currentChamber || "Introduced",
-    legislationUrl: bill.urls?.congressURL || "",
+    legislationUrl: bill.url || bill.urls?.congressURL || "",
 
-    sponsor: bill.sponsors?.[0] || null,
-    cosponsors: cosponsors,
-
-    cosponsorCount: cosponsors.length,
+    sponsor,
+    cosponsors: normalizedCosponsors,
+    cosponsorCount: normalizedCosponsors.length,
     updatedDate: new Date().toISOString(),
 
     stageDates: {
@@ -134,7 +197,23 @@ function normalizeBill(raw, cosponsors, billNumber) {
       becameLaw: bill.enactedDate || null
     },
 
-    committeeActions: bill.committeeReports || []
+    committeeActions: normalizeCommitteeReports(bill.committeeReports)
+  };
+}
+
+// ---------------------------
+// FILTER TO WASHINGTON ONLY
+// ---------------------------
+function filterWashingtonOnly(data) {
+  const waSponsor = data.sponsor && isWA(data.sponsor) ? data.sponsor : null;
+  const waCosponsors = sortMembers(uniqueMembers((data.cosponsors || []).filter(isWA)));
+
+  return {
+    ...data,
+    hasWaSponsor: waSponsor !== null,
+    waSponsor,
+    waCosponsors,
+    waCosponsorCount: waCosponsors.length
   };
 }
 
@@ -148,25 +227,27 @@ async function run() {
 
   for (const bill of bills) {
     const chamber = getChamber(bill).toUpperCase();
-    console.log(`\nChecking ${chamber}. ${bill}...`);
+    console.log(`\nChecking ${chamber === "HR" ? "H.R." : "S."} ${bill}...`);
 
     try {
-      // 1. Fetch page 1
       const base = await fetchBaseBill(bill);
-
-      // 2. Fetch ALL cosponsors (multi-page)
-      const allCos = await getAllCosponsors(bill);
-
-      // 3. Normalize
-      const fullBill = normalizeBill(base, allCos, bill);
-
-      // 4. WA Filter
+      const allCosponsors = await getAllCosponsors(bill);
+      const fullBill = normalizeBill(base, allCosponsors, bill);
       const waBill = filterWashingtonOnly(fullBill);
 
       console.log(
-        `→ WA Sponsor: ${waBill.hasWaSponsor ? "YES" : "NO"}, ` +
+        `→ Total cosponsors: ${waBill.cosponsorCount}, ` +
+        `WA Sponsor: ${waBill.hasWaSponsor ? "YES" : "NO"}, ` +
         `WA Cosponsors: ${waBill.waCosponsorCount}`
       );
+
+      if (waBill.id === "hr2102") {
+        console.log(
+          `→ H.R. 2102 WA names: ${
+            waBill.waCosponsors.map(x => x.fullName).join(", ") || "none"
+          }`
+        );
+      }
 
       output[waBill.id] = waBill;
     } catch (err) {
@@ -174,7 +255,6 @@ async function run() {
     }
   }
 
-  // Save file
   const outPath = path.resolve("bills.json");
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
 
